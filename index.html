@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Umbrella Media // Print Publishing Studio</title>
+  
+  <!-- Google Fonts (Editorial Serifs + Luxury Mastheads + Personable Handwritten Scripts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gochi+Hand&family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800&family=Kalam:wght@300;400;700&family=Marck+Script&family=Montserrat:wght@300;400;600;700;800;900&family=Oswald:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sacramento&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/index.css?v=masthead-personalize-v2">
+  <link rel="stylesheet" href="styles/print-proofs.css?v=masthead-personalize-v2">
+  <link rel="stylesheet" href="styles/print-cmyk.css?v=masthead-personalize-v2">
+</head>
+<body>
+
+  <!-- Top App Navigation & Brand Bar -->
+  <header class="app-header">
+    <div class="brand-badge">
+      <div class="brand-icon-wrap" style="background: linear-gradient(135deg, #F8E5A7 0%, #D4AF37 50%, #AA820A 100%); color: #0A0C10; font-weight: 900; font-family: 'DM Sans', sans-serif;">☂</div>
+      <div class="brand-titles">
+        <h1 id="app-main-title">Local Umbrella Media <span class="pill">Magazine Studio</span></h1>
+        <p>Publishing Engine • Active Client / Publisher: <strong id="header-active-publisher-name" style="color: #F8E5A7;">Local Umbrella Media</strong></p>
+      </div>
+    </div>
+
+    <!-- Print Deliverable Switcher -->
+    <nav class="nav-controls">
+      <button class="nav-tab-btn active" data-format="cover">
+        Magazine Cover (8.5x11)
+      </button>
+      <button class="nav-tab-btn" data-format="full-magazine">
+        Full Magazine Issue (16 Pages)
+      </button>
+      <button class="nav-tab-btn" data-format="spread">
+        2-Page Editorial Spread
+      </button>
+      <button class="nav-tab-btn" data-format="postcard">
+        Direct-Mail Postcard (6x9)
+      </button>
+      <button class="nav-tab-btn" data-format="layers">
+        Photoshop (.PSD) Layers
+      </button>
+      <button class="nav-tab-btn" data-format="branding">
+        Magazine Crest & Logo Studio
+      </button>
+      <button class="nav-tab-btn" data-format="uploader">
+        Client Media Vault
+      </button>
+      <button class="nav-tab-btn" data-format="operations">
+        Operations & Intake Hub
+      </button>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Auth Role & User Switcher -->
+      <div id="auth-badge-wrap" class="auth-badge-wrap">
+        <div id="auth-status-pill" class="auth-status-pill admin-badge">
+          <span class="auth-role-dot"></span>
+          <span id="auth-user-name">Axios Studio Admin</span>
+        </div>
+        <button id="open-auth-modal-btn" class="btn-auth-switch" title="Switch User / Client Login">
+          Switch User ▾
+        </button>
+      </div>
+
+      <!-- Profile & Issue Picker -->
+      <div class="profile-select-wrap" id="profile-select-wrapper">
+        <label for="profile-select">Active Issue:</label>
+        <select id="profile-select" class="profile-select">
+          <option value="real-producers-katie-courtney">[Issue #101] Real Producers: Katie Nelson & Courtney Roth</option>
+          <option value="marcus-vance">[Issue #102] Faces of SD: Marcus Vance (Architecture)</option>
+          <option value="women-venture-summit">[Issue #103] Faces of SD: Women's Venture Summit 2026</option>
+          <option value="melissa-sargent-therapy">[Issue #104] Faces of SD: Melissa Sargent (Therapy)</option>
+          <option value="nadia-eghaneyan-nexiya">[Issue #105] Faces of SD: Nadia Eghaneyan (Nexiya)</option>
+          <option value="surinder-goode-military">[Issue #106] Faces of Our Military: Surinder Goode</option>
+          <option value="inspired-kids-kaden">[Issue #107] Inspired Kids: Kaden Baksh (4S Ranch)</option>
+          <option value="thom-vollenweider">[Issue #108] Faces of SD: Thom Vollenweider (50 Yrs Photo)</option>
+          <option value="dana-grizzel-nc">[Issue #109] Faces of NC: Dana Grizzel (Indie Publishing)</option>
+          <option value="senior-floyd-armstrong">[Issue #110] San Diego Senior: Floyd Armstrong</option>
+          <option value="monica-nash-compass">[Issue #111] Real Estate Woman: Monica Nash</option>
+        </select>
+      </div>
+
+      <!-- Tutorial & Guide Action -->
+      <button id="btn-open-tutorial-modal" class="btn-icon" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38BDF8; font-weight: 700; padding: 6px 12px; display: flex; align-items: center; gap: 5px;" title="Interactive System Tutorial & Guide">
+        <span>🎓</span> Tutorial & Guide
+      </button>
+
+      <!-- New Magazine Action -->
+      <button id="btn-open-create-magazine-modal" class="btn-icon" style="background: linear-gradient(135deg, #F8E5A7 0%, #D4AF37 50%, #AA820A 100%); color: #0A0C10; font-weight: 800; border: none; padding: 6px 12px;" title="Create a New Magazine Issue Project">
+        New Issue
+      </button>
+
+      <!-- Controls & Export -->
+      <button id="toggle-drawer-btn" class="btn-icon active" title="Toggle Copy & Layer Editor">
+        Edit Copy ($0)
+      </button>
+
+      <button id="open-psd-modal-btn" class="btn-icon" title="View Layer Architecture">
+        .PSD Specs
+      </button>
+
+      <button id="export-pdf-btn" class="btn-icon btn-primary-action" title="Export High-Resolution Print PDF">
+        Export PDF (300 DPI)
+      </button>
+    </div>
+  </header>
+
+  <!-- Workspace Multi-Project Tab Strip -->
+  <div id="workspace-projects-bar" class="workspace-projects-bar" style="background: #0B101D; border-bottom: 1px solid rgba(212,175,55,0.25); padding: 6px 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 12px; overflow-x: auto;">
+    <div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
+      <span style="font-size: 0.68rem; color: #D4AF37; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; display: flex; align-items: center; gap: 5px;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #34D399; display: inline-block;"></span> Active Projects Workspace:
+      </span>
+      <div id="workspace-project-pills" style="display: flex; gap: 6px; overflow-x: auto;">
+        <!-- Dynamically injected project tabs -->
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
+      <span style="font-size: 0.65rem; color: #94A3B8;">Multi-Issue Editing Active</span>
+    </div>
+  </div>
+
+  <!-- Secondary Toolbar with Proofing Guides & Clean Peek -->
+  <div class="sub-toolbar">
+    <div class="toolbar-left">
+      <div class="tool-toggle-group">
+        <label class="toggle-label">
+          <input type="checkbox" id="toggle-guides">
+          <span>Show Bleed & Trim Guides (0.125")</span>
+        </label>
+        <label class="toggle-label" style="margin-left: 14px;">
+          <input type="checkbox" id="toggle-face-guard" checked>
+          <span>Face & Collision Guard</span>
+        </label>
+        <label class="toggle-label" style="margin-left: 14px;">
+          <input type="checkbox" id="toggle-flip-sound" checked>
+          <span>Tactile Page Flip Sound</span>
+        </label>
+        <!-- Admin-Only Watermark Checkbox -->
+        <label id="toolbar-watermark-checkbox-wrap" class="toggle-label" style="display: none; margin-left: 14px; background: rgba(212,175,55,0.12); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(212,175,55,0.4);">
+          <input type="checkbox" id="toggle-security-watermark" checked>
+          <span style="color: #F8E5A7; font-weight: 700;">Security Watermark (Admin)</span>
+        </label>
+        <button id="btn-peek-watermark" type="button" class="btn-icon" style="background: linear-gradient(135deg, rgba(212,175,55,0.2) 0%, rgba(18,24,38,0.95) 100%); border: 1px solid #D4AF37; color: #F8E5A7; font-weight: 800; font-size: 0.68rem; padding: 4px 12px; display: inline-flex; align-items: center; gap: 6px; margin-left: 14px; cursor: pointer; border-radius: 4px;" title="Temporarily preview clean page aesthetics for 3 seconds">
+          Hold for 3s Clean Peek
+        </button>
+        <span id="peek-countdown-badge" style="display: none; background: #D4AF37; color: #0A0C10; font-size: 0.65rem; font-weight: 900; padding: 2px 7px; border-radius: 10px; margin-left: 4px;">3.0s</span>
+      </div>
+      <div id="face-guard-status-pill" class="cost-free-badge" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34D399; margin-left: 10px;">
+        Face Clearance: 100% Safe
+      </div>
+    </div>
+
+    <div class="toolbar-right">
+      <span style="color: #64748B;">Print Geometry: 8.5" × 11" Trim • 300 DPI CMYK Lossless Pipeline</span>
+    </div>
+  </div>
+
+  <!-- Main Proofing Studio Workspace -->
+  <main class="workspace-layout">
+    <!-- Proof Canvas Stage -->
+    <section id="proof-stage" class="proof-stage">
+      <!-- Dynamic Content Injected via JS -->
+    </section>
+
+    <!-- Live Inspector & Copy Editor Drawer -->
+    <aside id="inspector-drawer" class="inspector-drawer">
+      <div class="drawer-header">
+        <h3>Live Copy & Style Editor</h3>
+        <span class="cost-free-badge">$0 Cost / Local</span>
+      </div>
+
+      <div class="drawer-tabs">
+        <button class="drawer-tab-btn active" data-tab="layout">Layout & Style</button>
+        <button class="drawer-tab-btn" data-tab="copy">Story & Editorial Copy</button>
+        <button class="drawer-tab-btn" data-tab="layers">PSD Layers</button>
+      </div>
+
+      <!-- Layout & Alignment Controls Tab -->
+      <div id="layout-editor-tab" class="drawer-content" style="display: flex;">
+        <!-- AI Natural Language Text Customization Studio (Sidebar Mirror) -->
+        <div class="sidebar-ai-prompt-box" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(56, 189, 248, 0.08) 100%); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <label style="font-size: 0.72rem; font-weight: 800; color: #F8E5A7; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px;">
+              <span>✨</span> AI Text Style Prompt Studio
+            </label>
+            <span id="sidebar-target-text-badge" class="badge" style="background: #38BDF8; color: #0A0C10; font-weight: 800; font-size: 0.6rem;">Select Text on Canvas</span>
+          </div>
+          <p style="font-size: 0.68rem; color: #CBD5E1; line-height: 1.35; margin-bottom: 8px;">
+            Click any text on the proof canvas and type what you want it to look like (font, color, 3D effect, mood):
+          </p>
+
+          <div style="display: flex; gap: 6px; margin-bottom: 8px;">
+            <input type="text" id="input-sidebar-ai-prompt" class="form-input" style="font-size: 0.76rem; background: #060910; border-color: #D4AF37; color: #FFF;" placeholder="e.g. '3D chiseled Roman stone in gold', 'cyberpunk cyan neon', 'luxury calligraphy'..." />
+            <button type="button" id="btn-sidebar-generate-styles" class="btn-generate-styles-gold" style="font-size: 0.72rem; padding: 6px 10px;" title="Generate 3 custom styles from prompt">
+              <span>✨</span> Generate
+            </button>
+          </div>
+
+          <!-- Quick prompt inspiration chips -->
+          <div class="quick-prompt-chips-row" style="display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px;">
+            <button type="button" class="btn-prompt-chip" data-prompt="24K gold embossed with luxury shadow">👑 24K Gold Emboss</button>
+            <button type="button" class="btn-prompt-chip" data-prompt="monumental 3D chiseled Roman stone">🏛️ 3D Chiseled Stone</button>
+            <button type="button" class="btn-prompt-chip" data-prompt="cyberpunk laser neon cyan glow">⚡ Neon Glow</button>
+            <button type="button" class="btn-prompt-chip" data-prompt="clean modern architectural navy">🌊 Coastal Navy</button>
+            <button type="button" class="btn-prompt-chip" data-prompt="luxury calligraphy cursive swash in gold">🖋️ Calligraphy</button>
+            <button type="button" class="btn-prompt-chip" data-prompt="vintage typewriter debossed letterpress">📰 Vintage Press</button>
+          </div>
+
+          <div id="sidebar-ai-options-grid" style="display: flex; flex-direction: column; gap: 6px;">
+            <!-- Generated options appear here -->
+          </div>
+
+          <!-- Sidebar Undo / Redo / Reset Actions -->
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; margin-top: 8px;">
+            <div style="display: flex; gap: 6px;">
+              <button type="button" id="btn-sidebar-undo-styles" class="btn-inspector-action btn-inspector-undo" title="Undo last style change" disabled style="font-size: 0.65rem; padding: 4px 8px;">
+                ↶ Undo
+              </button>
+              <button type="button" id="btn-sidebar-redo-styles" class="btn-inspector-action btn-inspector-redo" title="Redo last style change" disabled style="font-size: 0.65rem; padding: 4px 8px;">
+                ↷ Redo
+              </button>
+            </div>
+            <button type="button" id="btn-sidebar-reset-styles" class="btn-inspector-reset" title="Reset this element to template default" style="font-size: 0.62rem; padding: 4px 8px;">
+              ↺ Reset Style
+            </button>
+          </div>
+        </div>
+
+        <p style="font-size: 0.75rem; color: #94A3B8; line-height: 1.4;">
+          Choose from <strong>8 Layout Archetypes</strong> and customize colors, typography, and scale for infinite cover variations.
+        </p>
+
+        <!-- 8 Layout Archetypes Selector -->
+        <div class="form-group">
+          <label>Layout Archetype <span class="badge">8 Presets</span></label>
+          <select id="select-layout-preset" class="form-input" style="cursor: pointer;">
+            <option value="real-producers">Real Producers Magazine Style</option>
+            <option value="classic-center">1. Classic Center (Symmetrical Split)</option>
+            <option value="left-sidebar">2. Left Editorial Box (Thom Vollenweider)</option>
+            <option value="right-hero">3. Right Hero Callout (Melissa Sargent)</option>
+            <option value="minimal-vogue">4. Minimalist Vogue (Nadia Eghaneyan)</option>
+            <option value="luxury-gold-frame">5. Luxury Gold Border Frame</option>
+            <option value="modern-grid">6. Modern Bold Grid (Tech / Finance)</option>
+            <option value="quote-forward">7. Big Quote Hero (Story Focus)</option>
+            <option value="coastal-band">8. Coastal Split Band (Lifestyle)</option>
+          </select>
+        </div>
+
+        <!-- Color & Palette Themes -->
+        <div class="form-group">
+          <label>Color & Material Theme</label>
+          <select id="select-color-theme" class="form-input" style="cursor: pointer;">
+            <option value="theme-navy-gold">Navy & Gold (Signature Official)</option>
+            <option value="theme-emerald-gold">Emerald & Bronze (Luxury Eco)</option>
+            <option value="theme-sunset-coral">Sunset Coral & Amber (Vibrant)</option>
+            <option value="theme-obsidian-slate">Obsidian & Titanium (Modern Minimal)</option>
+            <option value="theme-white-gold">Champagne & White (Bridal / Boutique)</option>
+          </select>
+        </div>
+
+        <!-- Cover Masthead & Title Customization Suite -->
+        <div class="form-group" style="background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35); border-radius: 6px; padding: 10px; margin-bottom: 12px;">
+          <label style="display: flex; justify-content: space-between; align-items: center; color: #F8E5A7; font-weight: 800; margin-bottom: 6px;">
+            <span>👑 Masthead & Title Personalization</span>
+            <span class="badge" style="background:#D4AF37; color:#0A0C10; font-weight:800;">Cover Typography</span>
+          </label>
+          <div style="font-size: 0.65rem; color: #CBD5E1; margin-bottom: 8px;">
+            Customize the masthead font style, vertical position/clearance, overall scale, and fine-tuned word sizes.
+          </div>
+
+          <!-- Masthead Font Family -->
+          <div style="margin-bottom: 8px;">
+            <label style="font-size: 0.68rem; color: #CBD5E1; display: block; margin-bottom: 2px;">Masthead Font Family</label>
+            <select id="select-masthead-font" class="form-input" style="cursor: pointer; border-color: #D4AF37; background: #0F1420; color: #F8E5A7; font-weight: 700;">
+              <option value="masthead-font-playfair" selected>Playfair Display (Haute Editorial Serif)</option>
+              <option value="masthead-font-cinzel">Cinzel (Royal Roman Classical Serif)</option>
+              <option value="masthead-font-bodoni">Bodoni Moda (Vogue Italian High Fashion)</option>
+              <option value="masthead-font-cormorant">Cormorant Garamond (Elegance Hairline 300)</option>
+              <option value="masthead-font-montserrat">Montserrat (Modernist Ultra-Bold Sans)</option>
+              <option value="masthead-font-oswald">Oswald (High-Impact Condensed Display)</option>
+              <option value="masthead-font-bebas">Bebas Neue (Bold Architectural Title)</option>
+              <option value="masthead-font-syne">Syne (Avant-Garde Designer Display)</option>
+              <option value="masthead-font-dmsans">DM Sans (Clean Geometric Sans)</option>
+            </select>
+          </div>
+
+          <!-- Masthead Top Position / Vertical Offset Slider -->
+          <div style="margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <label style="font-size: 0.68rem; color: #CBD5E1;">Vertical Position / Top Offset</label>
+              <span id="masthead-top-val" class="badge" style="background: rgba(255,255,255,0.1); color: #F8E5A7;">24px</span>
+            </div>
+            <input type="range" id="slider-masthead-top" min="0" max="120" value="24" class="form-input" style="padding: 2px;">
+            <div style="display: flex; gap: 4px; margin-top: 4px;">
+              <button type="button" class="btn-icon btn-top-preset" data-top="10" style="font-size: 0.62rem; padding: 2px 6px;">Flush Top (10px)</button>
+              <button type="button" class="btn-icon btn-top-preset" data-top="24" style="font-size: 0.62rem; padding: 2px 6px;">Standard (24px)</button>
+              <button type="button" class="btn-icon btn-top-preset" data-top="48" style="font-size: 0.62rem; padding: 2px 6px;">Airy (48px)</button>
+              <button type="button" class="btn-icon btn-top-preset" data-top="72" style="font-size: 0.62rem; padding: 2px 6px;">Low Clearance (72px)</button>
+            </div>
+          </div>
+
+          <!-- Masthead Overall Scale Slider -->
+          <div style="margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <label style="font-size: 0.68rem; color: #CBD5E1;">Masthead Scale / Size</label>
+              <span id="masthead-scale-val" class="badge" style="background: rgba(255,255,255,0.1); color: #F8E5A7;">100%</span>
+            </div>
+            <input type="range" id="slider-masthead-scale" min="60" max="150" value="100" class="form-input" style="padding: 2px;">
+            <div style="display: flex; gap: 4px; margin-top: 4px;">
+              <button type="button" class="btn-icon btn-scale-preset" data-scale="80" style="font-size: 0.62rem; padding: 2px 6px;">Compact (80%)</button>
+              <button type="button" class="btn-icon btn-scale-preset" data-scale="100" style="font-size: 0.62rem; padding: 2px 6px;">100%</button>
+              <button type="button" class="btn-icon btn-scale-preset" data-scale="120" style="font-size: 0.62rem; padding: 2px 6px;">Large (120%)</button>
+              <button type="button" class="btn-icon btn-scale-preset" data-scale="135" style="font-size: 0.62rem; padding: 2px 6px;">Jumbo (135%)</button>
+            </div>
+          </div>
+
+          <!-- Word 1 vs Word 2 Font Size Tuning -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.62rem; color: #CBD5E1; margin-bottom: 2px;">
+                <span>Word 1 Size</span>
+                <span id="title-primary-size-val" style="color: #F8E5A7;">5.0rem</span>
+              </div>
+              <input type="range" id="slider-title-primary-size" min="2.5" max="7.0" step="0.1" value="5.0" class="form-input" style="padding: 2px;">
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.62rem; color: #CBD5E1; margin-bottom: 2px;">
+                <span>Word 2 / City Size</span>
+                <span id="title-secondary-size-val" style="color: #F8E5A7;">3.4rem</span>
+              </div>
+              <input type="range" id="slider-title-secondary-size" min="1.5" max="5.0" step="0.1" value="3.4" class="form-input" style="padding: 2px;">
+            </div>
+          </div>
+
+          <!-- Masthead Horizontal Alignment -->
+          <div>
+            <label style="font-size: 0.68rem; color: #CBD5E1; display: block; margin-bottom: 4px;">Masthead Horizontal Alignment</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px;">
+              <button type="button" class="btn-icon masthead-align-btn active" data-val="left">Left</button>
+              <button type="button" class="btn-icon masthead-align-btn" data-val="center">Center</button>
+              <button type="button" class="btn-icon masthead-align-btn" data-val="right">Right</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Masthead Aesthetic & Title Style -->
+        <div class="form-group">
+          <label style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Cover Masthead Treatment</span>
+            <span class="badge" style="background:#D4AF37; color:#0A0C10; font-weight:800;">Masthead DNA</span>
+          </label>
+          <select id="select-masthead-style" class="form-input" style="cursor: pointer; border-color: #D4AF37; background: #0F1420; color: #F8E5A7; font-weight: 700;">
+            <option value="masthead-mode-thin-line-elegance">Thin-Line Elegance (Cormorant 300 Hairline + Whisper Gold Rules)</option>
+            <option value="masthead-mode-vogue-bold">Vogue Ultra-Bold (Heavy Impact Serif / Sans + Cinzel)</option>
+            <option value="masthead-mode-script-intertwined">Intertwined Script & Serif (Calligraphy Accent Overlay)</option>
+            <option value="masthead-mode-architectural-modern">Architectural Precision (Ultra-Tracked Modernist Framing)</option>
+            <option value="masthead-mode-duotone-dual-weight">Duotone Dual-Weight (Hairline Top + Bold Heavy Base)</option>
+            <option value="masthead-mode-gold-emboss-3d">3D Gold Embossed Foil (Liquid Specular Metallic Sheen)</option>
+            <option value="masthead-mode-standard">Classic Faces of San Diego Standard</option>
+          </select>
+        </div>
+
+        <!-- Cover Title Color Harmony & Contrast Duo -->
+        <div class="form-group" style="background: rgba(245,196,81,0.06); border: 1px solid rgba(245,196,81,0.3); border-radius: 6px; padding: 10px;">
+          <label style="display: flex; justify-content: space-between; align-items: center; color: #F8E5A7; font-weight: 800;">
+            <span>Title Color Harmony & Contrast</span>
+            <span class="badge" style="background:#F5C451; color:#0A0C10; font-weight:800;">Color Balance</span>
+          </label>
+          <div style="font-size: 0.65rem; color: #CBD5E1; margin: 4px 0 8px 0;">
+            Harmonizes multi-word titles with complementary & contrasting dual-tones across words, cities, and rules.
+          </div>
+          <select id="select-title-color-palette" class="form-input" style="cursor: pointer; border-color: #F5C451; background: #0F1420; color: #F8E5A7; font-weight: 700;">
+            <option value="title-palette-gold-white" selected>24K Gold & Brilliant White (Classic High-Contrast Luxury)</option>
+            <option value="title-palette-champagne-bronze">Champagne & Patina Bronze (Warm Monochromatic)</option>
+            <option value="title-palette-emerald-gold">Jewel Emerald & Amber Gold (Vibrant Eco Prestige)</option>
+            <option value="title-palette-sunset-coral">Sunset Coral & Warm Amber (La Jolla Warmth)</option>
+            <option value="title-palette-sapphire-platinum">Ocean Sapphire & Pure Platinum (Cool Coastline)</option>
+            <option value="title-palette-obsidian-titanium">Titanium Silver & Electric Gold (Architectural Noir)</option>
+            <option value="title-palette-crimson-linen">Crimson Velvet & Linen Ivory (Authoritative Editorial)</option>
+            <option value="title-palette-pure-gold">Liquid 24K Gold Duotone (All-Gold Metallic)</option>
+            <option value="title-palette-custom">Custom Dual-Tone Palette (Pick Your Colors)</option>
+          </select>
+
+          <!-- Custom Color Pickers -->
+          <div id="custom-title-color-controls" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 8px;">
+            <div>
+              <label style="font-size: 0.6rem; color: #CBD5E1; display: block; margin-bottom: 2px;">Word 1 (Primary)</label>
+              <div style="display: flex; align-items: center; gap: 4px; background: #0A0D14; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 2px 4px;">
+                <input type="color" id="picker-title-primary" value="#F5C451" style="width: 20px; height: 20px; border: none; background: transparent; cursor: pointer; padding: 0;" />
+                <input type="text" id="hex-title-primary" value="#F5C451" style="width: 100%; font-size: 0.62rem; color: #FFF; background: transparent; border: none; font-family: monospace;" />
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.6rem; color: #CBD5E1; display: block; margin-bottom: 2px;">Word 2 (Secondary)</label>
+              <div style="display: flex; align-items: center; gap: 4px; background: #0A0D14; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 2px 4px;">
+                <input type="color" id="picker-title-secondary" value="#FFFFFF" style="width: 20px; height: 20px; border: none; background: transparent; cursor: pointer; padding: 0;" />
+                <input type="text" id="hex-title-secondary" value="#FFFFFF" style="width: 100%; font-size: 0.62rem; color: #FFF; background: transparent; border: none; font-family: monospace;" />
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.6rem; color: #CBD5E1; display: block; margin-bottom: 2px;">City / Accent</label>
+              <div style="display: flex; align-items: center; gap: 4px; background: #0A0D14; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 2px 4px;">
+                <input type="color" id="picker-title-city" value="#E11D48" style="width: 20px; height: 20px; border: none; background: transparent; cursor: pointer; padding: 0;" />
+                <input type="text" id="hex-title-city" value="#E11D48" style="width: 100%; font-size: 0.62rem; color: #FFF; background: transparent; border: none; font-family: monospace;" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Masthead Typography Tuning (Weight & Letter Spacing) -->
+        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <div>
+            <label style="font-size: 0.68rem;">Title Weight</label>
+            <select id="select-masthead-weight" class="form-input" style="cursor: pointer; font-size: 0.72rem;">
+              <option value="masthead-weight-thin">Thin Hairline (300)</option>
+              <option value="masthead-weight-regular">Regular (500)</option>
+              <option value="masthead-weight-bold">Bold (700)</option>
+              <option value="masthead-weight-ultra" selected>Ultra Black (900)</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size: 0.68rem;">Letter Spacing (Kerning)</label>
+            <select id="select-masthead-spacing" class="form-input" style="cursor: pointer; font-size: 0.72rem;">
+              <option value="masthead-spacing-tight">Tight Condensed (-0.02em)</option>
+              <option value="masthead-spacing-balanced" selected>Balanced (Standard)</option>
+              <option value="masthead-spacing-wide">Wide Luxury (+0.18em)</option>
+              <option value="masthead-spacing-ultra">Ultra-Spaced (+0.32em)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Side Text / Teaser Styling & Tone (Friendly, Welcoming, Inviting) -->
+        <div class="form-group" style="background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35); border-radius: 6px; padding: 10px;">
+          <label style="display: flex; justify-content: space-between; align-items: center; color: #F8E5A7; font-weight: 800;">
+            <span>Side Text / Teaser Style & Tone</span>
+            <span class="badge" style="background:#10B981; color:#0A0C10; font-weight:800;">Inviting & Friendly</span>
+          </label>
+          <div style="font-size: 0.65rem; color: #CBD5E1; margin: 4px 0 8px 0;">
+            Conveys welcoming warmth, personable handwritten accents, and high-conversion editorial quality.
+          </div>
+          <select id="select-teaser-style" class="form-input" style="cursor: pointer; font-size: 0.74rem; font-weight: 700; background: #0A0E18; color: #FFF; border-color: #D4AF37;">
+            <option value="teaser-mode-welcoming-storyteller" selected>Welcoming Storyteller (Handwritten Kickers: "Meet the Duo", "Local Secrets")</option>
+            <option value="teaser-mode-editorial-gold-numbered">Curated Editorial Numbered (01 // 02 // 03 Luxury Gold Markers)</option>
+            <option value="teaser-mode-curated-spotlight">Curated Spotlight (Editorial Highlight Tags)</option>
+            <option value="teaser-mode-conversational-quote">Conversational Warm Quotes (Italic Editorial Intrigue)</option>
+            <option value="teaser-mode-clean-floating">Clean Minimal Floating Deck</option>
+          </select>
+        </div>
+
+        <!-- Handwritten Script Accent Font Style -->
+        <div class="form-group">
+          <label style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Handwritten Script Accent</span>
+            <span class="badge" style="background:#D4AF37; color:#0A0C10; font-weight:800;">Cover Tagline</span>
+          </label>
+          <select id="select-script-font" class="form-input" style="cursor: pointer; border-color: #D4AF37; background: #0F1420; color: #F8E5A7; font-weight: 700;">
+            <option value="script-gochi">Gochi Hand (Approachable Handwritten — Real Estate Woman)</option>
+            <option value="script-caveat">Caveat (Warm Organic Editorial Pen)</option>
+            <option value="script-kalam">Kalam (Friendly Casual Hand-Lettering)</option>
+            <option value="script-sacramento">Sacramento (Luxury Parisian Signature Cursive)</option>
+            <option value="script-marck">Marck Script (Executive Letter Signoff)</option>
+            <option value="script-dancing">Dancing Script (Flowing Expressive Cursive)</option>
+            <option value="script-alex">Alex Brush (Luxury Signature Flourish)</option>
+            <option value="script-playfair-italic">Playfair Display Italic (Classic Editorial)</option>
+            <option value="script-none">None (Clean Modern Sans Only)</option>
+          </select>
+        </div>
+
+        <!-- Cover Aesthetic DNA & Reference Archetypes -->
+        <div class="form-group" style="background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.3); border-radius: 6px; padding: 10px; margin-top: 6px;">
+          <div style="font-size: 0.74rem; font-weight: 800; color: #F8E5A7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between; align-items: center;">
+            <span>Cover Aesthetic DNA Presets</span>
+            <span style="font-size: 0.6rem; color: #34D399; font-weight: 700;">300 DPI Match</span>
+          </div>
+          <div style="font-size: 0.66rem; color: #94A3B8; margin-bottom: 8px;">
+            1-Click ingest and replicate exact cover layout aesthetic while varying text, person, and palette.
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+            <button type="button" class="btn-icon dna-preset-btn" data-dna="real-estate-woman" style="font-size: 0.65rem; padding: 5px; text-align: left; justify-content: flex-start;">
+              Real Estate Woman
+            </button>
+            <button type="button" class="btn-icon dna-preset-btn" data-dna="real-producers" style="font-size: 0.65rem; padding: 5px; text-align: left; justify-content: flex-start;">
+              Real Producers SD
+            </button>
+            <button type="button" class="btn-icon dna-preset-btn" data-dna="faces-minimal" style="font-size: 0.65rem; padding: 5px; text-align: left; justify-content: flex-start;">
+              Faces of SD Minimal
+            </button>
+            <button type="button" class="btn-icon dna-preset-btn" data-dna="venture-summit" style="font-size: 0.65rem; padding: 5px; text-align: left; justify-content: flex-start;">
+              Venture Summit Gold
+            </button>
+          </div>
+        </div>
+
+        <!-- Text Legibility & Contrast Pre-Flight Analyzer -->
+        <div class="form-group legibility-analyzer-card" style="background: rgba(14, 18, 28, 0.95); border: 1px solid rgba(212, 175, 55, 0.45); border-radius: 6px; padding: 10px; margin-top: 6px;">
+          <div style="font-size: 0.74rem; font-weight: 800; color: #F8E5A7; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between; align-items: center;">
+            <span>Text Legibility & Contrast Guard</span>
+            <span id="legibility-overall-badge" class="legibility-badge-pass">100% WCAG AAA</span>
+          </div>
+          <div style="font-size: 0.65rem; color: #94A3B8; margin-bottom: 8px;">
+            Detects washed-out text on bright sunlight/glass backgrounds and automatically applies optical backplates or complementary dark fonts.
+          </div>
+
+          <!-- Live Contrast Diagnostic Telemetry -->
+          <div style="background: rgba(0,0,0,0.5); border-radius: 4px; padding: 6px 8px; margin-bottom: 8px; font-size: 0.64rem;">
+            <div class="legibility-meter-row">
+              <span style="color: #CBD5E1;">Masthead / Top Header</span>
+              <span id="legibility-stat-masthead" class="legibility-badge-pass">8.8:1 Optimal</span>
+            </div>
+            <div class="legibility-meter-row">
+              <span style="color: #CBD5E1;">Security Proof Crest</span>
+              <span id="legibility-stat-watermark" class="legibility-badge-pass">10.4:1 Optical Backplate</span>
+            </div>
+            <div class="legibility-meter-row">
+              <span style="color: #CBD5E1;">Teasers & Deck Copy</span>
+              <span id="legibility-stat-teasers" class="legibility-badge-pass">9.2:1 High-Def Shadow</span>
+            </div>
+          </div>
+
+          <!-- Remediation Mode Selector -->
+          <label style="font-size: 0.68rem; color: #E2E8F0; font-weight: 700;">Legibility Defense Mode</label>
+          <select id="select-legibility-mode" class="form-input" style="cursor: pointer; font-size: 0.72rem; margin-bottom: 6px;">
+            <option value="smart-auto">Smart Auto-Compensate (Auto Contrast Balance)</option>
+            <option value="optical-glass">Luxury Dark Optical Glass Backplate (Deep Contrast Pill)</option>
+            <option value="complementary-dark">Complementary High-Contrast Dark Typography</option>
+            <option value="dual-shadow">Dual-Tone High-Definition Pre-Press Shadow</option>
+            <option value="standard-raw">Raw / Uncorrected</option>
+          </select>
+
+          <!-- Complementary Dark Font Tone Picker -->
+          <label style="font-size: 0.68rem; color: #E2E8F0; font-weight: 700;">Complementary Font Tone</label>
+          <select id="select-complementary-tone" class="form-input" style="cursor: pointer; font-size: 0.72rem; margin-bottom: 8px;">
+            <option value="obsidian-navy">Midnight Obsidian Navy (#071E4A / Gold Trim)</option>
+            <option value="deep-crimson">Deep Tuscan Crimson (#6B1D2F / Cream Trim)</option>
+            <option value="slate-charcoal">Slate Charcoal (#1E293B / Warm Glow)</option>
+            <option value="champagne-gold">Champagne Gold on Dark Scrim (#F8E5A7)</option>
+          </select>
+
+          <!-- 1-Click Auto Fix Button -->
+          <button type="button" id="btn-autofix-legibility" class="btn-icon btn-primary-action" style="justify-content: center; width: 100%; font-size: 0.72rem; padding: 6px 10px; font-weight: 800;">
+            1-Click Auto-Fix All Legibility Issues
+          </button>
+        </div>
+
+
+        <!-- Teasers Alignment & Placement -->
+        <div class="form-group">
+          <label>Teasers & Headline Position</label>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;">
+            <button type="button" class="btn-icon teaser-btn active" data-val="split">Split Both</button>
+            <button type="button" class="btn-icon teaser-btn" data-val="left-only">Left Column</button>
+            <button type="button" class="btn-icon teaser-btn" data-val="right-only">Right Column</button>
+          </div>
+        </div>
+
+        <!-- Bottom Sponsor Banner Style -->
+        <div class="form-group">
+          <label>Bottom Sponsor Banner Style</label>
+          <select id="select-banner-style" class="form-input" style="cursor: pointer;">
+            <option value="curved-arc">Curved Navy & Gold Arc (Classic)</option>
+            <option value="modern-bar">Flush Modern Navy Bar (Sleek)</option>
+            <option value="gold-plaque">Gold Plaque Box (High-End)</option>
+            <option value="minimal-line">Minimal Floating Line (Subtle)</option>
+          </select>
+        </div>
+
+        <!-- Subject Photo Framing / Focal Offset -->
+        <div class="form-group">
+          <label>Photo Focal Position (Pan/Crop)</label>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;">
+            <button type="button" class="btn-icon photo-pos-btn" data-val="left top">Left</button>
+            <button type="button" class="btn-icon photo-pos-btn active" data-val="center top">Center</button>
+            <button type="button" class="btn-icon photo-pos-btn" data-val="right top">Right</button>
+          </div>
+        </div>
+
+        <!-- Admin-Only Proprietary Security Watermark Controls -->
+        <div class="form-group" id="watermark-control-group" style="display: none; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.35); padding: 8px 10px; border-radius: 4px; margin-top: 6px;">
+          <label style="color: #F8E5A7; font-weight: 800; display: flex; justify-content: space-between;">
+            <span>Admin Proof Security Layer</span>
+            <span id="watermark-role-badge" class="badge" style="background: #D4AF37; color: #0A0C10; font-weight: 800;">Admin Master</span>
+          </label>
+          <select id="select-watermark-mode" class="form-input" style="cursor: pointer; background: #0E121A; border: 1px solid #D4AF37; color: #FFF; font-weight: 700;">
+            <option value="diagonal-ai-guard">Diagonal Ribbon + AI Prompt Directive (Active)</option>
+            <option value="heavy-anti-scraper">Heavy Anti-Screenshot Matrix (Full Defense)</option>
+            <option value="subtle-stamps">Subtle Perimeter Security Stamps</option>
+            <option value="clean-export">Off (Clean Master for Certified Offset Press)</option>
+          </select>
+        </div>
+
+        <!-- Direct Photoshop & Canva Handover Actions -->
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn-icon btn-primary-action" style="justify-content: center; width: 100%;" onclick="document.getElementById('psd-modal').classList.add('open')">
+            Export to Photoshop (.PSD)
+          </button>
+          <button type="button" class="btn-icon" style="justify-content: center; width: 100%;" onclick="alert('Canva template link generated with matching editable text boxes and photo placeholders.');">
+            Send to Canva Template
+          </button>
+        </div>
+      </div>
+
+      <!-- Copy Editor Form -->
+      <div id="copy-editor-tab" class="drawer-content">
+        <p style="font-size: 0.75rem; color: #94A3B8; line-height: 1.4;">
+          Edit any field below to watch the print layout update live in real-time with zero latency.
+        </p>
+
+        <div class="form-group" style="background: rgba(212,175,55,0.1); padding: 8px 10px; border-radius: 4px; border: 1px solid rgba(212,175,55,0.3); margin-bottom: 12px;">
+          <label style="color: #F8E5A7; font-weight: 800;">Display Page Number <span class="badge" style="background: #D4AF37; color: #000;">Manual Folio</span></label>
+          <input type="text" id="input-display-page-number" class="form-input" value="02" placeholder="e.g. 14 or 22" style="background: #0E121A; border: 1px solid #D4AF37; color: #FFF; font-weight: 700;">
+          <span style="font-size: 0.65rem; color: #94A3B8; margin-top: 3px; display: block;">Manually alter folio number for external magazine insertion.</span>
+        </div>
+
+        <div class="form-group">
+          <label>Person / Entity Name <span class="badge">Live</span></label>
+          <input type="text" id="input-person-name" class="form-input" value="MARCUS VANCE">
+        </div>
+
+        <div class="form-group">
+          <label>Cover Tagline Script <span class="badge">Playfair Italic</span></label>
+          <input type="text" id="input-tagline" class="form-input" value="Building with the Tide">
+        </div>
+
+        <div class="form-group">
+          <label>Category Subtag <span class="badge">Oswald Bold</span></label>
+          <input type="text" id="input-category" class="form-input" value="COASTAL ARCHITECTURE & DESIGN">
+        </div>
+
+        <div class="form-group">
+          <label>Editorial Headline <span class="badge">Spread Title</span></label>
+          <input type="text" id="input-headline" class="form-input" value="How Marcus Vance is Reimagining the San Diego Coastline">
+        </div>
+
+        <div class="form-group">
+          <label>The Big Picture (Key Takeaway) <span class="badge">Editorial Brief</span></label>
+          <textarea id="input-big-picture" class="form-textarea">For decades, Southern California coastal architecture prioritized maximum square footage over environmental harmony...</textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Why It Matters (Impact & Context) <span class="badge">Editorial Brief</span></label>
+          <textarea id="input-why-it-matters" class="form-textarea">With sea levels and coastal storms shifting bluff safety requirements across Del Mar and Encinitas...</textarea>
+        </div>
+      </div>
+
+      <!-- PSD Layer Tree View -->
+      <div id="layer-tree-tab" class="drawer-content" style="display: none;">
+        <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.5rem;">
+          The multi-layer Photoshop structure generated for client handover:
+        </p>
+
+        <ul class="layer-tree">
+          <li class="layer-item">
+            <div class="layer-info">
+              <span class="layer-icon">📝</span>
+              <span>Layer 5: Live Text Elements</span>
+            </div>
+            <span class="layer-type">Text</span>
+          </li>
+          <li class="layer-item">
+            <div class="layer-info">
+              <span class="layer-icon">🎨</span>
+              <span>Layer 4: Gold Ribbon & Sponsor Arc</span>
+            </div>
+            <span class="layer-type">Vector</span>
+          </li>
+          <li class="layer-item">
+            <div class="layer-info">
+              <span class="layer-icon">👤</span>
+              <span>Layer 3: Subject Alpha Mask Cutout</span>
+            </div>
+            <span class="layer-type">Smart Object</span>
+          </li>
+          <li class="layer-item">
+            <div class="layer-info">
+              <span class="layer-icon">👑</span>
+              <span>Layer 2: "FACES of SAN DIEGO" Masthead</span>
+            </div>
+            <span class="layer-type">Vector</span>
+          </li>
+          <li class="layer-item">
+            <div class="layer-info">
+              <span class="layer-icon">🖼️</span>
+              <span>Layer 1: Scene Background Plate</span>
+            </div>
+            <span class="layer-type">Raster 300DPI</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- PSD Layer Specification Modal -->
+  <div id="psd-modal" class="psd-download-modal">
+    <div class="modal-card">
+      <h2><span>📁</span> Photoshop (.PSD) & Canva Layer Handover</h2>
+      <p>
+        When our automated system completes a magazine design, it packages the assets into an organized, fully non-destructive Photoshop document so your artistic client can tweak every detail locally.
+      </p>
+
+      <div class="layer-breakdown-box">
+• Group: "MAGAZINE COVER [8.5x11 - 300 DPI]"
+  ├── [T] Headlines & Teaser Copy (Playfair Display / Oswald / DM Sans)
+  ├── [T] Issue & Neighborhood Kicker
+  ├── [Vector] Gold Foil Rules & Trim Accents
+  ├── [T] "FACES OF SAN DIEGO" Masthead
+  ├── [T] Subtitle & Community Tagline
+  ├── [Smart Object] Alpha Cutout Portrait Mask
+  ├── [Raster] 300 DPI Architectural Travertine Master Plate
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 1.5rem; justify-content: flex-end;">
+        <button type="button" class="btn-icon" onclick="document.getElementById('psd-modal').classList.remove('open')">Close</button>
+        <button type="button" class="btn-icon btn-primary-action" onclick="alert('Downloading high-resolution 300 DPI PSD Master Layer Package (184 MB)...'); document.getElementById('psd-modal').classList.remove('open');">
+          Download Master .PSD Package
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unified Multi-Tenant Authentication Splash & Sign-In Modal -->
+  <div id="auth-modal" class="auth-modal">
+    <div class="auth-modal-card">
+      <div class="auth-modal-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+        <div>
+          <span class="mag-kicker-solid-gold">SECURITY // ROLE-BASED CLIENT PORTAL ACCESS</span>
+          <h2 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #F8E5A7; margin: 4px 0 2px 0;">
+            Print Publishing Studio Sign In
+          </h2>
+          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">
+            Sign in with your organization account or enter as a verified client tenant.
+          </p>
+        </div>
+        <button id="close-auth-modal-btn" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #94A3B8; font-size: 1.1rem; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="Close and continue as guest">✕</button>
+      </div>
+
+      <!-- Quick Fast Login Demo Chips -->
+      <div style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+        <span>1-Click Verified Role Access:</span>
+        <span style="font-size: 0.65rem; color: #34D399; font-weight: normal;">● Instant Workspace Access</span>
+      </div>
+      <div class="auth-demo-chips">
+        <button type="button" class="demo-chip active-chip" data-email="katie@compass.com" data-pin="katie2026">
+          👑 Katie & Courtney (Compass Luxury)
+        </button>
+        <button type="button" class="demo-chip" data-email="marcus@vancestudio.com" data-pin="marcus2026">
+          🏛️ Marcus Vance (Architecture)
+        </button>
+        <button type="button" class="demo-chip" data-email="publisher@localumbrella.com" data-pin="brad2026">
+          ☂️ Brad Weber (Publisher)
+        </button>
+        <button type="button" class="demo-chip" data-email="admin@axiosmediagroup.com" data-pin="admin2026">
+          ⚙️ Master Studio Admin
+        </button>
+      </div>
+
+      <!-- Modern Social / OAuth SSO Fast Login -->
+      <div class="oauth-providers-wrap">
+        <button type="button" class="btn-oauth-sso" id="btn-oauth-google">
+          <svg width="18" height="18" viewBox="0 0 24 24">
+            <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.4 1 3.5 3.6 1.6 7.4l3.7 2.9C6.2 7.4 8.9 5 12 5z"/>
+            <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z"/>
+            <path fill="#FBBC05" d="M5.3 14.7c-.2-.7-.4-1.5-.4-2.7s.1-2 .4-2.7L1.6 6.4C.6 8.4 0 10.6 0 13s.6 4.6 1.6 6.6l3.7-2.9z"/>
+            <path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3.1 0-5.8-2.4-6.7-5.3L1.6 16C3.5 19.8 7.4 23 12 23z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+
+        <button type="button" class="btn-oauth-sso" id="btn-oauth-microsoft">
+          <svg width="18" height="18" viewBox="0 0 23 23">
+            <path fill="#f35325" d="M1 1h10v10H1z"/>
+            <path fill="#81bc06" d="M12 1h10v10H12z"/>
+            <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+            <path fill="#ffba08" d="M12 12h10v10H12z"/>
+          </svg>
+          <span>Continue with Microsoft 365</span>
+        </button>
+      </div>
+
+      <div class="auth-divider-line">
+        <span>or sign in with credentials</span>
+      </div>
+
+      <!-- Unified Email & Key Login Form -->
+      <form id="unified-auth-form" onsubmit="return false;">
+        <div class="auth-input-row">
+          <label for="auth-email-input">Work / Organization Email</label>
+          <input type="email" id="auth-email-input" placeholder="e.g. katie@compass.com, publisher@localumbrella.com" value="katie@compass.com" required />
+        </div>
+
+        <div class="auth-input-row">
+          <label for="auth-password-input">Password / Security PIN <span style="font-size: 0.65rem; color: #64748B; text-transform: none; font-weight: normal;">(Optional for demo accounts)</span></label>
+          <input type="password" id="auth-password-input" placeholder="Enter password or leave blank for instant login" value="katie2026" />
+        </div>
+
+        <div id="auth-tenant-preview-box" style="font-size: 0.72rem; color: #10B981; margin: 4px 0 14px 0; line-height: 1.4; background: rgba(16, 185, 129, 0.08); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.25);">
+          ✓ <strong>Auto-Discovered Account:</strong> <span id="auth-discovered-role">Client Portal // Real Producers (Katie Nelson & Courtney Roth)</span>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button type="submit" id="btn-login-unified" class="btn-auth-submit" style="flex: 1.3;">
+            Sign In to Print Studio
+          </button>
+          <button type="button" id="btn-quick-demo-login" class="btn-auth-submit" style="flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #F8E5A7; box-shadow: none;">
+            🚀 Explore Demo Mode
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive Tutorial & Onboarding Guide Modal -->
+  <div id="tutorial-modal" class="auth-modal" style="display: none;">
+    <div class="tutorial-modal-card">
+      <div class="tutorial-header">
+        <div>
+          <span class="mag-kicker-solid-gold">INTERACTIVE SYSTEM GUIDE // LOCAL UMBRELLA MEDIA</span>
+          <h2>
+            <span>🎓</span>
+            <span>How to Use the Print Publishing Studio</span>
+          </h2>
+          <p>
+            Learn how to navigate multi-format deliverables, typography customization, 300 DPI proofing, and crest creation.
+          </p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <button id="btn-tutorial-dismiss-forever" style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.35); color: #FCA5A5; font-size: 0.72rem; font-weight: 700; padding: 6px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s;" title="Permanently dismiss tutorial so it never automatically opens on login">
+            <span>🚫</span> Don't Show Again
+          </button>
+          <button id="close-tutorial-modal-btn" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #94A3B8; font-size: 1.2rem; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Step Navigation Bar -->
+      <div class="tutorial-steps-bar">
+        <button type="button" class="tutorial-step-pill active" data-step="1">
+          <span>1.</span> Deliverable Formats
+        </button>
+        <button type="button" class="tutorial-step-pill" data-step="2">
+          <span>2.</span> Smart Typography & Fonts
+        </button>
+        <button type="button" class="tutorial-step-pill" data-step="3">
+          <span>3.</span> 300 DPI Proofing & Anti-Theft
+        </button>
+        <button type="button" class="tutorial-step-pill" data-step="4">
+          <span>4.</span> Crest & Masthead Studio
+        </button>
+        <button type="button" class="tutorial-step-pill" data-step="5">
+          <span>5.</span> Vault & Operations
+        </button>
+      </div>
+
+      <!-- Tutorial Body Slides -->
+      <div class="tutorial-body">
+        <!-- Slide 1: Deliverable Formats -->
+        <div id="tutorial-slide-1" class="tutorial-slide" style="display: block;">
+          <div class="tutorial-feature-card">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #F8E5A7; margin: 0 0 6px 0;">
+              📖 1. Switch Between 5 Publication Deliverables
+            </h3>
+            <p style="font-size: 0.8rem; color: #CBD5E1; line-height: 1.45; margin: 0;">
+              Use the top navigation tabs to toggle instantly between different print and digital production formats:
+            </p>
+
+            <div class="tutorial-feature-grid">
+              <div class="tutorial-feature-item">
+                <h4><span>📰</span> Magazine Cover (8.5×11)</h4>
+                <p>Full 300 DPI front cover with 8 archetype layouts, customizable teasers, and dual-tone mastheads.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>📖</span> 16-Page Full Issue</h4>
+                <p>Complete multi-page issue with Table of Contents, Rising Star, Strategy, Gala, and Back Cover.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>📑</span> 2-Page Editorial Spread</h4>
+                <p>Feature article layout with 2-column editorial, lead quote highlights, and infographic statistics.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>✉️</span> Direct-Mail Postcard (6×9)</h4>
+                <p>High-response farming postcard with USPS compliant address/indicia clear zones.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>📁</span> Photoshop (.PSD) Layers</h4>
+                <p>Non-destructive layered handover package with alpha cutout masks and live text elements.</p>
+              </div>
+            </div>
+
+            <div class="tutorial-tip-box">
+              <span>💡</span>
+              <div>
+                <strong>Pro-Tip:</strong> Use the active projects bar right below the navigation tabs to switch between different client issues (Real Producers, Faces of San Diego, Inspired Kids, etc.) in 1 click!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Typography & Smart Font Engine -->
+        <div id="tutorial-slide-2" class="tutorial-slide" style="display: none;">
+          <div class="tutorial-feature-card">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #F8E5A7; margin: 0 0 6px 0;">
+              ✍️ 2. On-Screen Typography & Natural-Language Smart Font Search
+            </h3>
+            <p style="font-size: 0.8rem; color: #CBD5E1; line-height: 1.45; margin: 0;">
+              Directly edit and style any text element on the magazine proof:
+            </p>
+
+            <div class="tutorial-feature-grid">
+              <div class="tutorial-feature-item">
+                <h4><span>🖱️</span> Direct Click-to-Inspect</h4>
+                <p>Click any title, subhead, kicker, body paragraph, or page number on screen to bring up the floating <strong>Typography & Color Inspector</strong>.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>🔍</span> Natural-Language Font Search</h4>
+                <p>Type keywords to discover matched fonts: <em>"Balloon Animal"</em> (Bubble/Fun), <em>"Funky"</em> (Retro), <em>"San Serif Script"</em>, <em>"Elegant and Bold"</em>, <em>"Signature Calligraphy"</em>, or <em>"Clean Architectural"</em>.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>🎨</span> Title Dual-Tone Color Balance</h4>
+                <p>Choose from 8 curated color harmonies (Gold + White, Champagne Bronze, Sapphire Platinum, Sunset Coral) or customize individual primary and secondary word tones.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>🔠</span> Letter Spacing & Sizing</h4>
+                <p>Adjust font size, line-height, letter spacing (kerning), and text casing (UPPERCASE, Title Case, lowercase) in real time.</p>
+              </div>
+            </div>
+
+            <div class="tutorial-tip-box">
+              <span>⚡</span>
+              <div>
+                <strong>Try It:</strong> You don't need to hunt through thousands of fonts. Simply type what mood you want (e.g. <em>"Balloon animal"</em> or <em>"Funky"</em>) into the font search box and select from the curated suggestions!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: 300 DPI Proofing & Anti-Theft -->
+        <div id="tutorial-slide-3" class="tutorial-slide" style="display: none;">
+          <div class="tutorial-feature-card">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #F8E5A7; margin: 0 0 6px 0;">
+              🛡️ 3. Pre-Press 300 DPI Proofing & Digital Rights Shield
+            </h3>
+            <p style="font-size: 0.8rem; color: #CBD5E1; line-height: 1.45; margin: 0;">
+              State-of-the-art security features protecting unreleased client proofs prior to official print sign-off:
+            </p>
+
+            <div class="tutorial-feature-grid">
+              <div class="tutorial-feature-item">
+                <h4><span>🔒</span> Repeating Guilloche Proof Lattice</h4>
+                <p>Proprietary multi-layer watermarks with publisher attribution and statutory protection under 17 U.S.C. § 1202.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>👁️</span> 3-Second Clean Proofing Peek</h4>
+                <p>Click <strong>"Peek (3s)"</strong> in the bottom toolbar for a high-res inspection of the clean artwork before automatic security re-engagement.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>⛔</span> Anti-Capture Blackout Shield</h4>
+                <p>Pressing <code>Ctrl+PrtScn</code> or attempting screenshot capture during a clean peek triggers a protective blackout curtain preventing unauthorized scraping.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>🖨️</span> 300 DPI CMYK PDF Release</h4>
+                <p>Click <strong>"Export PDF (300 DPI)"</strong> to authorize digital master release and generate official high-resolution press plates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Crest & Masthead Studio -->
+        <div id="tutorial-slide-4" class="tutorial-slide" style="display: none;">
+          <div class="tutorial-feature-card">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #F8E5A7; margin: 0 0 6px 0;">
+              👑 4. Magazine Masthead, Crest & Logo Studio
+            </h3>
+            <p style="font-size: 0.8rem; color: #CBD5E1; line-height: 1.45; margin: 0;">
+              Create bespoke typography, emblems, and sponsor badges tailored specifically to the active magazine publication:
+            </p>
+
+            <div class="tutorial-feature-grid">
+              <div class="tutorial-feature-item">
+                <h4><span>👑</span> Masthead Typography Studio</h4>
+                <p>Live vector title rendering with 24K Liquid Gold Foil, Platinum Chrome, Rose Gold, Royal Emerald, Onyx, and Pure White finishes.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>🛡️</span> Vector Crest & Seal Creator</h4>
+                <p>Generate custom Baroque Shields, Guilloche Medallions, Diamond Stars, and Laurel Wreaths with custom initials and symbols (⚜, 👑, ☂, ✦, ⚓, ⚡, 🦅).</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>🏢</span> Verified Sponsor Lockups</h4>
+                <p>Pre-cleared 300 DPI vector badges for Compass Luxury, Guaranteed Rate, First American Title, and Local Umbrella Media.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>✨</span> 1-Click Apply & Export</h4>
+                <p>Click <strong>"Apply Masthead to Active Magazine Cover"</strong> to update the live cover immediately, or download 300 DPI transparent PNG plates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5: Vault & Operations -->
+        <div id="tutorial-slide-5" class="tutorial-slide" style="display: none;">
+          <div class="tutorial-feature-card">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #F8E5A7; margin: 0 0 6px 0;">
+              ☁️ 5. Client Media Vault & Operations Hub
+            </h3>
+            <p style="font-size: 0.8rem; color: #CBD5E1; line-height: 1.45; margin: 0;">
+              Intelligent asset management and multi-magazine automated production workflow:
+            </p>
+
+            <div class="tutorial-feature-grid">
+              <div class="tutorial-feature-item">
+                <h4><span>☁️</span> Client Media Vault</h4>
+                <p>Upload high-resolution client photos with automatic 300+ DPI pre-flight verification, dimensions checks, and 1-click plate assignment.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>⚙️</span> Operations & Intake Hub</h4>
+                <p>Dispatch ad placements, transfer approved pages between regional magazine issues, and trigger print-ready plate generation.</p>
+              </div>
+              <div class="tutorial-feature-item">
+                <h4><span>✨</span> New Magazine Issue Wizard</h4>
+                <p>Click <strong>"New Issue"</strong> in the top header to configure page counts, publisher organizations, and auto-generate 300 DPI issue structures.</p>
+              </div>
+            </div>
+
+            <div class="tutorial-tip-box" style="background: rgba(16, 185, 129, 0.08); border-left-color: #10B981;">
+              <span>🚀</span>
+              <div>
+                <strong>You're All Set!</strong> You can reopen this guide anytime by clicking <strong>"🎓 Tutorial & Guide"</strong> in the top right header.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial Footer Controls -->
+      <div class="tutorial-footer">
+        <button type="button" id="btn-tutorial-prev" class="btn-tutorial-nav" style="visibility: hidden;">
+          ← Previous Step
+        </button>
+
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <label style="display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #CBD5E1; cursor: pointer; user-select: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.1);">
+            <input type="checkbox" id="chk-tutorial-dont-show-again" style="accent-color: #D4AF37; width: 14px; height: 14px; cursor: pointer;" />
+            <span>Don't show on login</span>
+          </label>
+
+          <div style="font-size: 0.76rem; color: #94A3B8; font-weight: 700;">
+            Step <span id="tutorial-step-counter" style="color: #F8E5A7;">1</span> of 5
+          </div>
+        </div>
+
+        <button type="button" id="btn-tutorial-next" class="btn-tutorial-action-gold">
+          Next Step →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create New Magazine Issue Multi-Step Wizard Modal -->
+  <div id="create-magazine-modal" class="auth-modal" style="display: none;">
+    <div class="auth-modal-card" style="max-width: 820px; text-align: left; max-height: 90vh; display: flex; flex-direction: column;">
+      <!-- Header -->
+      <div class="auth-modal-header" style="justify-content: space-between; flex-shrink: 0;">
+        <div>
+          <span class="mag-kicker-solid-gold">LOCAL UMBRELLA MEDIA // MAGAZINE PRODUCTION STUDIO</span>
+          <h3 style="margin: 2px 0 0 0; font-family: 'Playfair Display', serif; color: #F8E5A7; font-size: 1.4rem;">
+            ✨ Create Custom Magazine Project
+          </h3>
+          <p style="margin: 2px 0 0 0; font-size: 0.72rem; color: #94A3B8;">
+            Configure client/publisher branding, exact page count, per-page content briefs, and generate 300 DPI layouts.
+          </p>
+        </div>
+        <button type="button" id="close-create-magazine-modal-btn" class="auth-modal-close" style="background: none; border: none; color: #94A3B8; font-size: 1.4rem; cursor: pointer;">&times;</button>
+      </div>
+
+      <!-- Step Indicator Bar -->
+      <div class="wizard-steps-indicator" style="display: flex; gap: 8px; margin: 12px 0 6px 0; flex-shrink: 0;">
+        <div id="wizard-step-pill-1" class="wizard-step-pill active" style="flex: 1; background: rgba(212,175,55,0.2); border: 1px solid #D4AF37; padding: 6px 10px; border-radius: 4px; font-size: 0.7rem; color: #F8E5A7; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+          <span>1. Publisher & Page Count</span>
+        </div>
+        <div id="wizard-step-pill-2" class="wizard-step-pill" style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 6px 10px; border-radius: 4px; font-size: 0.7rem; color: #94A3B8; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+          <span>2. Per-Page Content & Asset Briefs</span>
+        </div>
+      </div>
+
+      <!-- Scrollable Wizard Body -->
+      <div style="overflow-y: auto; flex-grow: 1; padding-right: 4px; margin-top: 8px;">
+        <!-- Step 1: Issue Details & Page Count -->
+        <div id="wizard-step-1-content">
+          <!-- Client / Publisher Brand Selection -->
+          <div style="background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.25); padding: 10px 12px; border-radius: 6px; margin-bottom: 12px;">
+            <div style="font-size: 0.74rem; font-weight: 800; color: #F8E5A7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">
+              🏢 Client / Publisher Organization (Multi-Tenant Network)
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 10px;">
+              <div class="auth-input-row" style="margin-bottom: 0;">
+                <label for="new-mag-publisher-select" style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700;">Select Publishing Company</label>
+                <select id="new-mag-publisher-select" style="background: #101522; border: 1px solid #D4AF37; color: #F8E5A7; padding: 8px; border-radius: 4px; font-size: 0.82rem; width: 100%; box-sizing: border-box; font-weight: 700;">
+                  <option value="LOCAL UMBRELLA MEDIA" data-icon="☂" data-slogan="We've Got You Covered.">Local Umbrella Media (San Diego)</option>
+                  <option value="SAN DIEGO REAL PRODUCERS" data-icon="⚜" data-slogan="Connecting SD's Elite Real Estate Leaders.">San Diego Real Producers</option>
+                  <option value="INDIE PUBLISHING NETWORK" data-icon="✦" data-slogan="Hyper-Effective Local Magazine Systems.">Indie Publishing Network (North Carolina)</option>
+                  <option value="PACIFIC COASTAL LUXURY MEDIA" data-icon="⚓" data-slogan="Elevating Regional Distinction.">Pacific Coastal Luxury Media</option>
+                  <option value="AXIOS SIGNATURE PUBLISHING" data-icon="⚡" data-slogan="The Modern Media Operating System.">Axios Signature Publishing</option>
+                  <option value="custom" data-icon="★" data-slogan="Leading Regional Storytelling.">➕ Custom Magazine Publisher...</option>
+                </select>
+              </div>
+              <div class="auth-input-row" id="custom-publisher-input-wrap" style="margin-bottom: 0; display: none;">
+                <label for="new-mag-custom-publisher-name" style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700;">Custom Publisher Name</label>
+                <input type="text" id="new-mag-custom-publisher-name" placeholder="e.g. Coronado Living Magazine" style="background: #101522; border: 1px solid rgba(255,255,255,0.15); color: #FFF; padding: 8px; border-radius: 4px; font-size: 0.82rem; width: 100%; box-sizing: border-box;" />
+              </div>
+            </div>
+            <div id="publisher-branding-preview-row" style="display: flex; gap: 14px; margin-top: 8px; font-size: 0.68rem; color: #94A3B8; background: rgba(0,0,0,0.35); padding: 6px 10px; border-radius: 4px;">
+              <span>Brand Emblem: <strong id="preview-publisher-icon" style="color: #F8E5A7; font-size: 0.85rem;">☂</strong></span>
+              <span>Slogan: <strong id="preview-publisher-slogan" style="color: #E2E8F0;">We've Got You Covered.</strong></span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; margin-bottom: 10px;">
+            <div class="auth-input-row" style="margin-bottom: 0;">
+              <label for="new-mag-issue-num" style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700;">Issue Number #</label>
+              <input type="number" id="new-mag-issue-num" value="112" min="1" style="background: #101522; border: 1px solid rgba(255,255,255,0.15); color: #FFF; padding: 8px; border-radius: 4px; font-size: 0.85rem; width: 100%; box-sizing: border-box;" required />
+            </div>
+            <div class="auth-input-row" style="margin-bottom: 0;">
+              <label for="new-mag-pub-title" style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700;">Publication Title</label>
+              <input type="text" id="new-mag-pub-title" value="THE FACES OF SAN DIEGO: COASTAL LIVING" placeholder="e.g. THE FACES OF CORONADO" style="background: #101522; border: 1px solid rgba(255,255,255,0.15); color: #FFF; padding: 8px; border-radius: 4px; font-size: 0.85rem; width: 100%; box-sizing: border-box;" required />
+            </div>
+          </div>
+
+          <div class="auth-input-row" style="margin-bottom: 10px;">
+            <label for="new-mag-edition-subtitle" style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700;">Edition Subtitle / Series Focus</label>
+            <input type="text" id="new-mag-edition-subtitle" value="COMMUNITY LEADERS & ARCHITECTURAL INNOVATORS" placeholder="e.g. LUXURY ARCHITECTURE // 2026 EDITION" style="background: #101522; border: 1px solid rgba(255,255,255,0.15); color: #FFF; padding: 8px; border-radius: 4px; font-size: 0.85rem; width: 100%; box-sizing: border-box;" />
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 10px; margin-bottom: 10px;">
+            <div class="auth-input-row" style="margin-bottom: 0;">
+              <label for="new-mag-person-name" style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700;">Featured Person / Business Name</label>
+              <input type="text" id="new-mag-person-name" value="ALEXANDRA CHEN" placeholder="e.g. DAVID STERLING" style="background: #101522; border: 1px solid rgba(255,255,255,0.15); color: #FFF; padding: 8px; border-radius: 4px; font-size: 0.85rem; width: 100%; box-sizing: border-box;" required />
+            </div>
+            <div class="auth-input-row" style="margin-bottom: 0;">
+              <label for="new-mag-tagline" style="font-size: 0.72rem; color: #CBD5E1; font-weight: 700;">Tagline / Script Subtitle</label>
+              <input type="text" id="new-mag-tagline" value="A Vision for Coastal Excellence" placeholder="e.g. Leading with Purpose" style="background: #101522; border: 1px solid rgba(255,255,255,0.15); color: #FFF; padding: 8px; border-radius: 4px; font-size: 0.85rem; width: 100%; box-sizing: border-box;" />
+            </div>
+          </div>
+
+          <!-- Cover Style DNA & Typographic Archetype Selector with Custom Layout Text Prompt -->
+          <div class="auth-input-row" style="margin-bottom: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 6px;">
+            <label for="new-mag-cover-archetype-select" style="font-size: 0.72rem; color: #F8E5A7; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
+              <span>🎨 Cover Aesthetic Archetype DNA</span>
+              <span style="color: #34D399; font-size: 0.65rem; font-weight: 700;">Preset Baseline</span>
+            </label>
+            <select id="new-mag-cover-archetype-select" style="background: #101522; border: 1px solid #D4AF37; color: #FFF; padding: 8px; border-radius: 4px; font-size: 0.82rem; width: 100%; box-sizing: border-box; margin-top: 4px;">
+              <option value="real-estate-woman" data-script="script-gochi" data-theme="theme-sunset-coral" data-layout="classic-center">✍️ Real Estate Woman Archetype (Handwritten Gochi Script + Warm Gold/Coral + Bilateral Teasers)</option>
+              <option value="real-producers" data-script="script-playfair-italic" data-theme="theme-navy-gold" data-layout="real-producers" selected>⚜️ Real Producers Executive (Bold Playfair Masthead + Gold Rule + Bilateral Teasers)</option>
+              <option value="faces-minimal" data-script="script-dancing" data-theme="theme-obsidian-slate" data-layout="left-sidebar">🏛️ Faces of SD Minimalist (Left-Column Modern Serif + High Daylight Bleed)</option>
+              <option value="venture-summit" data-script="script-alex" data-theme="theme-navy-gold" data-layout="right-hero">✨ Venture Summit Dynamic (Signature Script + Gold Framing + Dynamic Pill Badges)</option>
+              <option value="custom" data-script="script-playfair-italic" data-theme="theme-navy-gold" data-layout="classic-center">🎨 Custom Layout Style (Enter Prompt Below)...</option>
+            </select>
+
+            <!-- Natural Language Custom Layout Style Prompt Input -->
+            <div style="margin-top: 10px;">
+              <label for="new-mag-custom-layout-prompt" style="font-size: 0.72rem; color: #F8E5A7; font-weight: 800; display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+                <span>✨ Custom Cover Layout & Aesthetic Prompt (Natural Language):</span>
+                <span style="font-size: 0.62rem; color: #38BDF8;">Prompt-Guided Layout</span>
+              </label>
+              <textarea id="new-mag-custom-layout-prompt" rows="2" placeholder="Describe any custom layout style you are looking for (e.g. Asymmetric minimalist architectural grid with daylight photography, bold obsidian masthead, gold foil drop shadow, and horizontal story pills)..." style="width: 100%; background: #141A26; border: 1px solid rgba(212,175,55,0.35); color: #FFF; padding: 7px 10px; border-radius: 4px; font-size: 0.75rem; line-height: 1.45; resize: vertical; box-sizing: border-box;">⚜️ Real Producers Executive: Bold Playfair Display masthead with gold foil accent rule, centered leader portrait, and bilateral balanced story teasers.</textarea>
+              
+              <!-- Inspiration Layout Prompt Chips -->
+              <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+                <button type="button" class="btn-cover-layout-prompt-chip" data-prompt="Minimalist architectural layout with full-bleed coastal hero, clean obsidian-slate left sidebar, and subtle gold typography" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #CBD5E1; padding: 3px 8px; border-radius: 3px; font-size: 0.64rem; cursor: pointer;">🏛️ Minimalist Architectural</button>
+                <button type="button" class="btn-cover-layout-prompt-chip" data-prompt="Luxury executive layout with bold serif masthead, 24K gold foil embossed accents, and bilateral teaser callouts" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #CBD5E1; padding: 3px 8px; border-radius: 3px; font-size: 0.64rem; cursor: pointer;">⚜️ Luxury Gold Executive</button>
+                <button type="button" class="btn-cover-layout-prompt-chip" data-prompt="Warm personable layout with handwritten script flourishes, sunset coral framing, and friendly quote callouts" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #CBD5E1; padding: 3px 8px; border-radius: 3px; font-size: 0.64rem; cursor: pointer;">✍️ Handwritten Warm Script</button>
+                <button type="button" class="btn-cover-layout-prompt-chip" data-prompt="High-energy summit layout with dynamic right-aligned hero, signature flourish, and navy-gold pill badges" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #CBD5E1; padding: 3px 8px; border-radius: 3px; font-size: 0.64rem; cursor: pointer;">✨ Dynamic Summit Badges</button>
+              </div>
+            </div>
+
+            <!-- Granular Cover Masthead Font & Top Placement Controls -->
+            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 8px;">
+              <div>
+                <label for="new-mag-masthead-font-select" style="font-size: 0.68rem; color: #CBD5E1; font-weight: 700; display: block; margin-bottom: 2px;">👑 Masthead Font</label>
+                <select id="new-mag-masthead-font-select" style="background: #141A26; border: 1px solid rgba(212,175,55,0.4); color: #F8E5A7; padding: 6px 8px; border-radius: 4px; font-size: 0.72rem; width: 100%; box-sizing: border-box; cursor: pointer;">
+                  <option value="masthead-font-playfair" selected>Playfair Display (Haute Serif)</option>
+                  <option value="masthead-font-cinzel">Cinzel (Royal Roman Classical)</option>
+                  <option value="masthead-font-bodoni">Bodoni Moda (Vogue Fashion)</option>
+                  <option value="masthead-font-cormorant">Cormorant Garamond (Hairline)</option>
+                  <option value="masthead-font-montserrat">Montserrat (Ultra-Bold Sans)</option>
+                  <option value="masthead-font-oswald">Oswald (Condensed Display)</option>
+                  <option value="masthead-font-bebas">Bebas Neue (Architectural)</option>
+                  <option value="masthead-font-syne">Syne (Avant-Garde Display)</option>
+                  <option value="masthead-font-dmsans">DM Sans (Precision Modern)</option>
+                </select>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: #CBD5E1; font-weight: 700; margin-bottom: 2px;">
+                  <span>Top Offset</span>
+                  <span id="new-mag-masthead-top-val" style="color: #F8E5A7;">24px</span>
+                </div>
+                <input type="range" id="new-mag-masthead-top-slider" min="0" max="120" value="24" style="width: 100%; padding: 2px;" />
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: #CBD5E1; font-weight: 700; margin-bottom: 2px;">
+                  <span>Scale / Size</span>
+                  <span id="new-mag-masthead-scale-val" style="color: #F8E5A7;">100%</span>
+                </div>
+                <input type="range" id="new-mag-masthead-scale-slider" min="60" max="150" value="100" style="width: 100%; padding: 2px;" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Page Count Input Section -->
+          <div style="background: #0A0D14; border: 1px solid rgba(212,175,55,0.35); padding: 14px; border-radius: 6px; margin-bottom: 14px;">
+            <div style="font-size: 0.82rem; font-weight: 800; color: #F8E5A7; margin-bottom: 4px;">
+              📄 How Many Pages Are Needed for this Project / Magazine?
+            </div>
+            <p style="font-size: 0.72rem; color: #94A3B8; margin: 0 0 10px 0;">
+              Enter the exact number of pages required. Whether a 2-page excerpt or a 32-page signature issue, each page will receive a dedicated content brief and asset builder.
+            </p>
+
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <label for="new-mag-page-count-input" style="font-size: 0.75rem; color: #CBD5E1; font-weight: 700;">Total Pages:</label>
+                <input type="number" id="new-mag-page-count-input" value="4" min="1" max="64" style="width: 80px; background: #141A26; border: 1px solid #D4AF37; color: #FFF; font-weight: 800; font-size: 1rem; padding: 6px 10px; border-radius: 4px; text-align: center;" />
+              </div>
+
+              <!-- Quick Presets -->
+              <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                <button type="button" class="btn-page-preset-chip" data-pages="2" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #E2E8F0; padding: 4px 8px; border-radius: 3px; font-size: 0.68rem; cursor: pointer;">2 Pages (Spread)</button>
+                <button type="button" class="btn-page-preset-chip active-preset" data-pages="4" style="background: rgba(212,175,55,0.2); border: 1px solid #D4AF37; color: #F8E5A7; padding: 4px 8px; border-radius: 3px; font-size: 0.68rem; cursor: pointer; font-weight: 700;">4 Pages (Insert)</button>
+                <button type="button" class="btn-page-preset-chip" data-pages="8" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #E2E8F0; padding: 4px 8px; border-radius: 3px; font-size: 0.68rem; cursor: pointer;">8 Pages (Feature)</button>
+                <button type="button" class="btn-page-preset-chip" data-pages="16" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #E2E8F0; padding: 4px 8px; border-radius: 3px; font-size: 0.68rem; cursor: pointer;">16 Pages (Full Issue)</button>
+                <button type="button" class="btn-page-preset-chip" data-pages="24" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #E2E8F0; padding: 4px 8px; border-radius: 3px; font-size: 0.68rem; cursor: pointer;">24 Pages (Expanded)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carry Over / Import Pages from Previous Issues or Approved Asset Vault -->
+          <div style="background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.35); padding: 12px; border-radius: 6px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <div style="font-size: 0.8rem; font-weight: 800; color: #38BDF8; display: flex; align-items: center; gap: 6px;">
+                <span>📥</span> Carry Over / Import Pages from Previous Issues & Approved Assets
+              </div>
+              <button type="button" id="btn-add-imported-page-row" style="background: rgba(56, 189, 248, 0.2); border: 1px solid #38BDF8; color: #38BDF8; font-size: 0.68rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; cursor: pointer;">
+                ➕ Add Page to Carry Over
+              </button>
+            </div>
+            <p style="font-size: 0.7rem; color: #CBD5E1; margin: 0 0 10px 0; line-height: 1.35;">
+              Are there existing approved pages from previous issues or the asset library to include in this new issue? Select the source page and which slot (e.g. Page 1, Page 4, Page 16) it should occupy.
+            </p>
+
+            <div id="wizard-import-pages-container" style="display: flex; flex-direction: column; gap: 6px;">
+              <!-- Dynamically populated import rows -->
+            </div>
+            <div id="wizard-import-empty-hint" style="font-size: 0.68rem; color: #94A3B8; font-style: italic; background: rgba(0,0,0,0.3); padding: 8px 10px; border-radius: 4px; text-align: center;">
+              No previous pages selected to carry over. All pages will be created fresh. Click "➕ Add Page to Carry Over" to import from existing issues.
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Per-Page Itemized Specification Builder -->
+        <div id="wizard-step-2-content" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; background: rgba(0,0,0,0.4); padding: 8px 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.08);">
+            <div>
+              <span style="font-size: 0.72rem; color: #D4AF37; font-weight: 800; text-transform: uppercase;">Per-Page Content & Asset Specifications:</span>
+              <div style="font-size: 0.68rem; color: #94A3B8;">Customize the exact manual page number, layout archetype, copy brief, and unique brand imagery for each page.</div>
+            </div>
+            <button type="button" id="btn-wizard-add-page-card" style="background: rgba(212,175,55,0.15); border: 1px solid #D4AF37; color: #F8E5A7; font-size: 0.68rem; padding: 4px 8px; border-radius: 3px; cursor: pointer; font-weight: 700;">
+              ➕ Add Another Page
+            </button>
+          </div>
+
+          <!-- Dynamic Container for Page Cards -->
+          <div id="new-mag-pages-builder-container" style="display: flex; flex-direction: column; gap: 12px;">
+            <!-- Rendered dynamically by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Generation Progress HUD -->
+        <div id="wizard-generation-hud" style="display: none; background: #0A0D14; border: 1px solid #D4AF37; border-radius: 6px; padding: 20px; text-align: center; margin: 10px 0;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px; animation: pulse 1.5s infinite;">⚡</div>
+          <h3 style="font-family: 'Playfair Display', serif; color: #F8E5A7; margin: 0 0 6px 0; font-size: 1.3rem;">
+            Synthesizing Magazine Layouts & Images
+          </h3>
+          <p style="font-size: 0.76rem; color: #CBD5E1; margin: 0 0 16px 0;">
+            Antigravity composing typographic structure • Fal.ai generating 300 DPI high-resolution visual masters.
+          </p>
+
+          <div style="background: rgba(255,255,255,0.06); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 14px;">
+            <div id="wizard-gen-progress-bar" style="width: 15%; height: 100%; background: linear-gradient(90deg, #F8E5A7 0%, #D4AF37 50%, #10B981 100%); transition: width 0.4s ease;"></div>
+          </div>
+
+          <div id="wizard-gen-status-text" style="font-size: 0.72rem; color: #34D399; font-weight: 700; text-align: left; background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.08); font-family: monospace;">
+            > Phase 1: Structuring 300 DPI page compositions in Antigravity...
+          </div>
+        </div>
+      </div>
+
+      <!-- Wizard Action Footer -->
+      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; margin-top: 10px; flex-shrink: 0;">
+        <button type="button" id="btn-cancel-create-magazine" class="btn-icon" style="background: rgba(255,255,255,0.1); color: #CBD5E1;">Cancel</button>
+
+        <div style="display: flex; gap: 8px;">
+          <button type="button" id="btn-wizard-prev-step" class="btn-icon" style="display: none; background: rgba(255,255,255,0.08); color: #CBD5E1;">
+            ← Back to Step 1
+          </button>
+          <button type="button" id="btn-wizard-next-step" class="btn-icon btn-primary-action" style="background: linear-gradient(135deg, #F8E5A7 0%, #D4AF37 50%, #AA820A 100%); color: #0A0C10; font-weight: 800; padding: 8px 16px;">
+            Next: Configure Pages Briefs →
+          </button>
+          <button type="button" id="btn-wizard-generate-mag" class="btn-icon btn-primary-action" style="display: none; background: linear-gradient(135deg, #F8E5A7 0%, #D4AF37 50%, #AA820A 100%); color: #0A0C10; font-weight: 800; padding: 8px 20px;">
+            ⚡ Generate Issue & Synthesize Pages
+          </button>
+        </div>
+      </div>
+    </div>
+  <!-- Clean PDF Release & Payment Authorization Modal -->
+  <div id="pdf-release-modal" class="modal-backdrop">
+    <div class="modal-dialog" style="max-width: 580px; background: #0E121A; border: 1px solid #D4AF37; box-shadow: 0 20px 60px rgba(0,0,0,0.85); color: #FFF;">
+      <div class="modal-header" style="border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.5rem; color: #D4AF37;">💎</span>
+          <div>
+            <h3 style="font-family: 'Playfair Display', serif; color: #F8E5A7; margin: 0; font-size: 1.25rem;">
+              Release Clean 300 DPI Press Master
+            </h3>
+            <span id="pdf-release-modal-subtitle" style="font-size: 0.68rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.1em;">
+              Axios Print Studio • Pre-Flight Offset Release Gate
+            </span>
+          </div>
+        </div>
+        <button id="close-pdf-release-modal-btn" class="modal-close-btn" style="color: #94A3B8; background: transparent; border: none; font-size: 1.3rem; cursor: pointer;">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding: 18px 0; display: flex; flex-direction: column; gap: 14px;">
+        <!-- Security Notice -->
+        <div style="background: rgba(220, 38, 38, 0.12); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 4px; padding: 10px 14px; display: flex; gap: 10px; align-items: flex-start;">
+          <span style="font-size: 1.2rem; color: #FCA5A5;">🛡️</span>
+          <div style="font-size: 0.72rem; color: #E2E8F0; line-height: 1.45;">
+            <strong style="color: #FCA5A5;">Proprietary Theft Protection Active:</strong> Digital proofs include the anti-theft safeguard ribbon. Authorizing publication release removes all watermarks and generates the certified uncompressed 300 DPI CMYK offset print master.
+          </div>
+        </div>
+
+        <!-- Release Details Card -->
+        <div style="background: #141A26; border: 1px solid rgba(212,175,55,0.25); border-radius: 6px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">
+            <span style="font-size: 0.75rem; color: #94A3B8;">Publication & Issue:</span>
+            <span id="pdf-release-doc-title" style="font-size: 0.78rem; color: #F8E5A7; font-weight: 700; text-align: right;">San Diego Real Producers (Issue #101)</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">
+            <span style="font-size: 0.75rem; color: #94A3B8;">Print Spec:</span>
+            <span style="font-size: 0.75rem; color: #E2E8F0;">8.5" × 11" Trim • 0.125" Bleed • 300 DPI CMYK Lossless PDF</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">
+            <span style="font-size: 0.75rem; color: #94A3B8;">Client / Account:</span>
+            <span id="pdf-release-account-name" style="font-size: 0.75rem; color: #E2E8F0; font-weight: 600;">Katie Nelson & Courtney Roth (Compass)</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 4px;">
+            <div>
+              <div style="font-size: 0.7rem; color: #94A3B8;">Release Fee / Licensing:</div>
+              <div style="font-size: 0.65rem; color: #34D399;">Covered under client retainer or direct invoice authorization</div>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #F8E5A7; font-weight: 800;">$150.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retainer / Billing Status -->
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 6px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #34D399;"></span>
+            <div>
+              <div style="font-size: 0.72rem; color: #34D399; font-weight: 800;">Client Retainer Account Active</div>
+              <div style="font-size: 0.65rem; color: #CBD5E1;">Available Balance: <strong id="pdf-release-retainer-bal" style="color: #FFF;">$850.00</strong> (Post-deduction: $700.00)</div>
+            </div>
+          </div>
+          <span class="badge" style="background: #10B981; color: #0A0C10; font-weight: 800; font-size: 0.65rem;">Authorized</span>
+        </div>
+      </div>
+
+      <!-- Modal Actions -->
+      <div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px;">
+        <button type="button" id="btn-confirm-pdf-release" class="btn-icon btn-primary-action" style="background: linear-gradient(135deg, #F8E5A7 0%, #D4AF37 50%, #AA820A 100%); color: #0A0C10; font-weight: 800; font-size: 0.85rem; padding: 10px 16px; justify-content: center; width: 100%;">
+          💳 Authorize $150 & Download Clean 300 DPI Master PDF
+        </button>
+
+        <div style="display: flex; gap: 8px;">
+          <button type="button" id="btn-download-watermarked-proof" class="btn-icon" style="flex: 1; justify-content: center; background: rgba(255,255,255,0.08); color: #E2E8F0; font-size: 0.72rem; padding: 6px 10px;">
+            📄 Download Watermarked Review PDF ($0 Free)
+          </button>
+          <button type="button" id="btn-cancel-pdf-release" class="btn-icon" style="background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #94A3B8; font-size: 0.72rem; padding: 6px 12px;">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- On-Screen Direct Typography & Color Inspector QuickBar -->
+  <!-- Floating AI Typography & Style Studio Popup -->
+  <div id="floating-text-inspector" class="floating-text-inspector" style="display: none;" aria-hidden="true">
+    <div class="floating-inspector-header">
+      <div class="floating-inspector-title">
+        <span class="inspector-icon">✨</span>
+        <span>AI Typography & Style Studio:</span>
+        <span id="floating-inspector-target-name" class="inspector-target-badge">Selected Text</span>
+      </div>
+      <button type="button" id="btn-close-floating-inspector" class="btn-close-inspector" title="Close Studio">✕</button>
+    </div>
+
+    <div class="floating-inspector-body">
+      <!-- Direct Copy Editor (Optional) -->
+      <div class="inspector-row copy-edit-row">
+        <label class="inspector-label">Text Content:</label>
+        <div style="display: flex; gap: 6px; width: 100%;">
+          <input type="text" id="input-floating-text-copy" class="floating-input-copy" placeholder="Edit text copy..." />
+          <button type="button" id="btn-floating-edit-inline" class="btn-inspector-action" title="Edit inline directly on proof">Inline</button>
+        </div>
+      </div>
+
+      <!-- AI Style Prompt Box -->
+      <div class="inspector-row ai-prompt-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+          <label class="inspector-label" style="color: #F8E5A7;">
+            <span>✨</span> Enter Your Style, Color & Effect Idea:
+          </label>
+          <span class="ai-pill">AI Style Synthesis</span>
+        </div>
+
+        <div style="display: flex; gap: 6px;">
+          <input type="text" id="input-ai-style-prompt" class="floating-input-font" placeholder="e.g. 'warm gold embossed with luxury shadow', 'balloon animal coral', 'chiseled stone 3D', 'architectural dark navy'..." />
+          <button type="button" id="btn-generate-ai-styles" class="btn-generate-styles-gold" title="Generate custom style options from your prompt">
+            <span>✨</span> Generate
+          </button>
+        </div>
+
+        <!-- Quick Prompt Inspiration Chips -->
+        <div class="quick-prompt-chips-row" style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px;">
+          <button type="button" class="btn-prompt-chip" data-prompt="24K gold embossed with luxury shadow">👑 24K Gold Emboss</button>
+          <button type="button" class="btn-prompt-chip" data-prompt="monumental 3D chiseled Roman stone">🏛️ 3D Chiseled Stone</button>
+          <button type="button" class="btn-prompt-chip" data-prompt="cyberpunk laser neon cyan glow">⚡ Neon Glow</button>
+          <button type="button" class="btn-prompt-chip" data-prompt="clean modern architectural navy">🌊 Coastal Navy</button>
+          <button type="button" class="btn-prompt-chip" data-prompt="luxury calligraphy cursive swash in gold">🖋️ Calligraphy</button>
+          <button type="button" class="btn-prompt-chip" data-prompt="vintage typewriter debossed letterpress">📰 Vintage Press</button>
+        </div>
+      </div>
+
+      <!-- Generated AI Style Options Grid (3 Distinct Options) -->
+      <div class="inspector-row ai-options-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+          <label class="inspector-label" style="color: #38BDF8;">
+            <span>🎨</span> Generated Options (Click to Apply):
+          </label>
+          <span id="ai-active-prompt-badge" style="font-size: 0.58rem; color: #94A3B8; font-style: italic;">3 Custom Styles Ready</span>
+        </div>
+
+        <div id="ai-style-options-grid" class="ai-style-options-grid">
+          <!-- 3 Dynamically synthesized options injected here based on prompt -->
+        </div>
+      </div>
+
+      <!-- Footer & Actions (Undo / Redo / Reset) -->
+      <div class="inspector-footer-actions">
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button type="button" id="btn-undo-element-custom-styles" class="btn-inspector-action btn-inspector-undo" title="Undo last style change (Ctrl+Z)" disabled>
+            ↶ Undo
+          </button>
+          <button type="button" id="btn-redo-element-custom-styles" class="btn-inspector-action btn-inspector-redo" title="Redo last style change (Ctrl+Y)" disabled>
+            ↷ Redo
+          </button>
+          <button type="button" id="btn-reset-element-custom-styles" class="btn-inspector-reset" title="Reset this element to its template archetype default">
+            ↺ Reset Style
+          </button>
+        </div>
+        <span style="font-size: 0.62rem; color: #64748B;">Click any text on the proof canvas to style it</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anti-Screenshot & Screen Capture Blackout Shield (17 U.S.C. § 1202) -->
+  <div id="screenshot-blackout-shield" class="screenshot-blackout-shield" aria-hidden="true">
+    <div class="blackout-shield-content">
+      <div class="blackout-shield-icon">⛔</div>
+      <h2 class="blackout-shield-title">Screen Capture Blocked</h2>
+      <div id="blackout-shield-reason" class="blackout-shield-subtitle">
+        3-Second Clean Peek Aborted // Digital Rights Shield Active
+      </div>
+      <p class="blackout-shield-desc">
+        Unreleased pre-press proofs are protected by digital copyright management systems. To export clean, unwatermarked 300 DPI CMYK press masters, please authorize digital master release.
+      </p>
+      <div class="blackout-shield-statute">
+        17 U.S.C. § 1202 • Local Umbrella Media Publishing Engine
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/sample-data.js?v=masthead-personalize-v2"></script>
+  <script src="js/app.js?v=masthead-personalize-v2"></script>
+</body>
+</html>

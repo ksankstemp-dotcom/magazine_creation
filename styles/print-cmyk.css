@@ -1,0 +1,95 @@
+/* ==========================================================================
+   PRINT MEDIA OUTPUT STYLESHEET (@media print / PDF Export)
+   ========================================================================== */
+
+@media print {
+  /* Hide all UI elements, controls, headers, drawers */
+  body, html {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+  }
+
+  .app-header,
+  .sub-toolbar,
+  .inspector-drawer,
+  .psd-download-modal,
+  .btn-icon,
+  .nav-controls,
+  .mag-nav-bar,
+  .mag-thumb-strip,
+  .page-turn-hotspot-left,
+  .page-turn-hotspot-right,
+  .bleed-guide,
+  .safe-margin-guide {
+    display: none !important;
+  }
+
+  .workspace-layout {
+    display: block !important;
+    min-height: auto !important;
+  }
+
+  .proof-stage {
+    background: transparent !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .proof-document-wrap {
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    page-break-after: always;
+  }
+
+  /* Force exact print page dimensions: 8.5in x 11in at 300 DPI */
+  @page {
+    size: 8.5in 11in;
+    margin: 0;
+  }
+
+  .magazine-cover,
+  .mag-page,
+  .full-print-sheet {
+    width: 8.5in !important;
+    height: 11in !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .spread-page-view {
+    box-shadow: none !important;
+    display: block !important;
+  }
+
+  .spread-page-view .mag-page {
+    width: 8.5in !important;
+    height: 11in !important;
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .editorial-spread {
+    width: 17in !important;
+    height: 11in !important;
+    page-break-after: always;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .postcard-proof {
+    width: 9in !important;
+    height: 6in !important;
+    page-break-after: always;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

@@ -1,0 +1,15 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# Environment and secrets
+.env
+.env.local
+*.log
+
+# Node & package artifacts
+node_modules/
+dist/
+.cache/
