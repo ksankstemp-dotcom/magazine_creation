@@ -9,6 +9,12 @@ desktop.ini
 .env.local
 *.log
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
 # Node & package artifacts
 node_modules/
 dist/
