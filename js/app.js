@@ -3617,7 +3617,7 @@ document.addEventListener("DOMContentLoaded", () => {
       apply3DEffectToElement(pkg.effect || "none");
     }
 
-    // Dynamically Synthesize 3 Distinct Style Options from user's text prompt
+    // Dynamically Synthesize 3 Distinct Style Options from user's text prompt (Premier Editorial Standard)
     function generateAIStyleOptions(promptQuery = "", fallbackColor = null) {
       if (!aiStyleOptionsGrid) return;
       const cleanPrompt = (promptQuery || "").toLowerCase().trim();
@@ -3626,290 +3626,290 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let options = [];
 
-      // 1. Balloon / Funky / Playful / Bubble / Pop
-      if (cleanPrompt.includes("balloon") || cleanPrompt.includes("funky") || cleanPrompt.includes("bubble") || cleanPrompt.includes("playful") || cleanPrompt.includes("cartoon") || cleanPrompt.includes("kids") || cleanPrompt.includes("pop")) {
+      // 1. Haute Couture / Vogue / Fashion / High-Contrast Serif
+      if (cleanPrompt.includes("vogue") || cleanPrompt.includes("fashion") || cleanPrompt.includes("couture") || cleanPrompt.includes("haute") || cleanPrompt.includes("serif") || cleanPrompt.includes("editorial")) {
         options = [
           {
-            badge: "Option 1 • 🎈 Chunky Balloon 3D",
-            title: "3D Popping Balloon",
-            font: "Bungee",
-            category: "Chunky Display",
-            color: detectedColor || "#FB7185",
-            effect: "luxury-shadow",
-            weight: "800",
-            letterSpacing: "0.04em",
-            transform: "uppercase",
-            description: "Chunky dimensional pop art geometry with deep cast drop shadow"
-          },
-          {
-            badge: "Option 2 • 🍬 Soft Bevel Emboss",
-            title: "Candy Bubble Emboss",
-            font: "Chewy",
-            category: "Soft Rounded",
-            color: cleanPrompt.includes("gold") ? "#F5C451" : (detectedColor === "#FB7185" ? "#38BDF8" : detectedColor),
-            effect: "embossed",
-            weight: "700",
-            letterSpacing: "0.02em",
-            transform: "none",
-            description: "Rounded organic curves with raised physical highlight beveling"
-          },
-          {
-            badge: "Option 3 • 🌟 Electric Funky Pop",
-            title: "Funky Neon Wave",
-            font: "Fredoka",
-            category: "Modern Bubble",
-            color: cleanPrompt.includes("cyan") ? "#38BDF8" : (detectedColor === "#FB7185" ? "#F59E0B" : "#FB7185"),
-            effect: "neon-glow",
-            weight: "700",
-            letterSpacing: "0.03em",
-            transform: "none",
-            description: "Playful bubble letterforms surrounded by high-energy vibrant glow"
-          }
-        ];
-      }
-      // 2. Chiseled / Stone / 3D Monumental / Marble / Carved
-      else if (cleanPrompt.includes("chisel") || cleanPrompt.includes("stone") || cleanPrompt.includes("monumental") || cleanPrompt.includes("carved") || cleanPrompt.includes("rock") || cleanPrompt.includes("marble") || cleanPrompt.includes("3d")) {
-        options = [
-          {
-            badge: "Option 1 • 🏛️ Monumental 3D Chiseled",
-            title: "Roman Monumental Stone",
-            font: "Cinzel",
-            category: "Classical Serif",
-            color: detectedColor === "#F5C451" ? "#F8E5A7" : (detectedColor || "#E2E8F0"),
-            effect: "chiseled",
-            weight: "900",
-            letterSpacing: "0.22em",
-            transform: "uppercase",
-            description: "Multi-layered stepped 3D shadow simulating carved architectural stone"
-          },
-          {
-            badge: "Option 2 • ⬛ Brutalist Carved Sans",
-            title: "Solid Architectural Relief",
-            font: "Montserrat",
-            category: "Heavy Modernist",
-            color: detectedColor || "#FFFFFF",
-            effect: "chiseled",
-            weight: "900",
-            letterSpacing: "0.18em",
-            transform: "uppercase",
-            description: "Heavy solid sans with deep multi-step dimensional facet shadows"
-          },
-          {
-            badge: "Option 3 • ⚜️ Haute Bas-Relief Serif",
-            title: "Sculpted Italian Relief",
+            badge: "Option 1 • 🏛️ Vogue High-Contrast Serif",
+            title: "Haute Italian Bodoni",
             font: "Bodoni Moda",
             category: "High-Contrast Serif",
-            color: detectedColor === "#E2E8F0" ? "#C5A059" : (detectedColor || "#CBD5E1"),
-            effect: "embossed",
+            color: detectedColor === "#F5C451" ? "#FFFFFF" : detectedColor,
+            effect: "luxury-shadow",
             weight: "900",
-            letterSpacing: "0.12em",
+            letterSpacing: "0.06em",
             transform: "uppercase",
-            description: "High-relief Italian fashion serif with top specular light and bottom shade"
-          }
-        ];
-      }
-      // 3. Neon / Cyber / Electric Glow / Synth
-      else if (cleanPrompt.includes("neon") || cleanPrompt.includes("glow") || cleanPrompt.includes("cyber") || cleanPrompt.includes("electric") || cleanPrompt.includes("synth") || cleanPrompt.includes("night") || cleanPrompt.includes("laser")) {
-        options = [
-          {
-            badge: "Option 1 • 💡 High-Voltage Cyber Glow",
-            title: "Cyberpunk Laser Radiant",
-            font: "Space Grotesk",
-            category: "Tech Modernist",
-            color: cleanPrompt.includes("magenta") ? "#EC4899" : (detectedColor || "#38BDF8"),
-            effect: "neon-glow",
-            weight: "700",
-            letterSpacing: "0.15em",
-            transform: "uppercase",
-            description: "Multi-tiered radiant neon bloom over precision modernist typography"
+            description: "High-contrast Italian fashion serif with deep atmospheric shadow and ultra-crisp hairline stems"
           },
           {
-            badge: "Option 2 • 🔮 Retro Synthwave Horizon",
-            title: "Arcade Magenta Glow",
-            font: "Righteous",
-            category: "Retro Geometric",
-            color: cleanPrompt.includes("cyan") ? "#38BDF8" : "#EC4899",
-            effect: "neon-glow",
-            weight: "700",
-            letterSpacing: "0.08em",
-            transform: "uppercase",
-            description: "Vibrant hot synthwave glow with nostalgic 80s display curves"
-          },
-          {
-            badge: "Option 3 • ⚡ Matrix Jewel Precision",
-            title: "Emerald Matrix Luminescence",
-            font: "Outfit",
-            category: "Clean Tech Sans",
-            color: cleanPrompt.includes("gold") ? "#F5C451" : "#10B981",
-            effect: "neon-glow",
-            weight: "800",
-            letterSpacing: "0.1em",
-            transform: "uppercase",
-            description: "Intense jewel halo glow surrounding ultra-crisp clean letterforms"
-          }
-        ];
-      }
-      // 4. Signature / Calligraphy / Handwritten / Script
-      else if (cleanPrompt.includes("signature") || cleanPrompt.includes("calligraphy") || cleanPrompt.includes("script") || cleanPrompt.includes("handwritten") || cleanPrompt.includes("cursive") || cleanPrompt.includes("flourish")) {
-        options = [
-          {
-            badge: "Option 1 • 🖋️ Signature Gold Foil",
-            title: "Luxury Calligraphy Swash",
-            font: "Great Vibes",
-            category: "Flowing Calligraphy",
+            badge: "Option 2 • ⚜️ Prestige Editorial Titling",
+            title: "Royal Playfair Display",
+            font: "Playfair Display",
+            category: "Classic Editorial Serif",
             color: detectedColor || "#F8E5A7",
-            effect: "gold-foil",
-            weight: "400",
-            letterSpacing: "0.02em",
-            transform: "none",
-            description: "Dramatic flowing swashes with metallic warm champagne gold foil sheen"
-          },
-          {
-            badge: "Option 2 • ✍️ Executive Brush Script",
-            title: "Executive Script Shadow",
-            font: "Alex Brush",
-            category: "Formal Brush",
-            color: detectedColor === "#F8E5A7" ? "#FFFFFF" : (detectedColor || "#FFFFFF"),
-            effect: "luxury-shadow",
-            weight: "400",
-            letterSpacing: "0.03em",
-            transform: "none",
-            description: "Refined hand-brushed lettering anchored by soft luxury shadow depth"
-          },
-          {
-            badge: "Option 3 • 🌿 Approachable Warm Script",
-            title: "Personable Note Emboss",
-            font: "Caveat",
-            category: "San-Serif Hand Script",
-            color: detectedColor || "#F5C451",
-            effect: "embossed",
-            weight: "700",
-            letterSpacing: "0.01em",
-            transform: "none",
-            description: "Authentic, friendly handwriting with raised physical emboss texture"
-          }
-        ];
-      }
-      // 5. Vintage Letterpress / Newspaper / Debossed / Typewriter
-      else if (cleanPrompt.includes("newspaper") || cleanPrompt.includes("letterpress") || cleanPrompt.includes("vintage") || cleanPrompt.includes("typewriter") || cleanPrompt.includes("retro") || cleanPrompt.includes("debossed") || cleanPrompt.includes("editorial press")) {
-        options = [
-          {
-            badge: "Option 1 • 📰 Authentic Press Deboss",
-            title: "Period Typewriter Deboss",
-            font: "Special Elite",
-            category: "Vintage Typewriter",
-            color: detectedColor || "#F8FAFC",
-            effect: "letterpress",
-            weight: "400",
-            letterSpacing: "0.08em",
-            transform: "none",
-            description: "Sunken letterpress deboss effect with authentic typewriter inked texture"
-          },
-          {
-            badge: "Option 2 • 📜 Heritage Editorial Press",
-            title: "Classical Literary Letterpress",
-            font: "Libre Baskerville",
-            category: "Book Serif",
-            color: detectedColor || "#E2E8F0",
-            effect: "letterpress",
-            weight: "700",
-            letterSpacing: "0.05em",
-            transform: "capitalize",
-            description: "19th century literary press styling with recessed paper debossing"
-          },
-          {
-            badge: "Option 3 • 🎩 Bold Period Titling",
-            title: "Haute Period Fatface Shadow",
-            font: "Abril Fatface",
-            category: "High-Contrast Display",
-            color: detectedColor || "#FFFFFF",
-            effect: "luxury-shadow",
+            effect: "chiseled",
             weight: "900",
             letterSpacing: "0.04em",
+            transform: "capitalize",
+            description: "Prestigious editorial display titling with razor-sharp serifs and subtle plate depth"
+          },
+          {
+            badge: "Option 3 • 🌿 Hairline Parisian Elegance",
+            title: "Cormorant Hairline 300",
+            font: "Cormorant Garamond",
+            category: "Elegance Hairline",
+            color: cleanPrompt.includes("gold") ? "#F5C451" : "#FFFFFF",
+            effect: "embossed",
+            weight: "400",
+            letterSpacing: "0.14em",
             transform: "uppercase",
-            description: "Dramatic extreme-contrast headline titling with heavy weighted physical presence"
+            description: "Ultra-delicate French literary serif with tactile fine-line blind emboss"
           }
         ];
       }
-      // 6. Clean Architectural / Modern Minimal / Coastal Navy
-      else if (cleanPrompt.includes("coastal") || cleanPrompt.includes("architectural") || cleanPrompt.includes("modern") || cleanPrompt.includes("clean") || cleanPrompt.includes("minimal") || cleanPrompt.includes("navy") || cleanPrompt.includes("swiss") || cleanPrompt.includes("sans")) {
+      // 2. 24K Gold & Metallic Foil / Luxury Emboss
+      else if (cleanPrompt.includes("gold") || cleanPrompt.includes("foil") || cleanPrompt.includes("24k") || cleanPrompt.includes("champagne") || cleanPrompt.includes("metallic") || cleanPrompt.includes("emboss") || cleanPrompt.includes("luxury")) {
         options = [
           {
-            badge: "Option 1 • 🌊 Coastal Deep Navy",
-            title: "Modern Architectural Navy",
+            badge: "Option 1 • 👑 24K Champagne Gold Foil",
+            title: "Royal Roman Gold Leaf",
+            font: "Cinzel",
+            category: "Imperial Roman",
+            color: "#F8E5A7",
+            effect: "gold-foil",
+            weight: "900",
+            letterSpacing: "0.16em",
+            transform: "uppercase",
+            description: "Smooth specular gold foil sheen with authentic metallic luster and crisp edge definition"
+          },
+          {
+            badge: "Option 2 • ✨ Haute Platinum Specular",
+            title: "Platinum Leaf Titling",
+            font: "Bodoni Moda",
+            category: "High-Fashion Serif",
+            color: "#FFFFFF",
+            effect: "platinum-foil",
+            weight: "900",
+            letterSpacing: "0.08em",
+            transform: "uppercase",
+            description: "Cool metallic platinum sheen with high-definition fashion contrast"
+          },
+          {
+            badge: "Option 3 • 🏛️ Architectural Beveled Gold",
+            title: "Chiseled Gold Emboss",
+            font: "Playfair Display",
+            category: "Editorial Serif",
+            color: "#F5C451",
+            effect: "chiseled",
+            weight: "800",
+            letterSpacing: "0.06em",
+            transform: "uppercase",
+            description: "Tactile chiseled gold plate with clean directional light relief"
+          }
+        ];
+      }
+      // 3. Modernist Architectural Sans / Coastal Navy / Swiss Clean
+      else if (cleanPrompt.includes("modern") || cleanPrompt.includes("architectural") || cleanPrompt.includes("sans") || cleanPrompt.includes("clean") || cleanPrompt.includes("minimal") || cleanPrompt.includes("navy") || cleanPrompt.includes("swiss") || cleanPrompt.includes("coastal")) {
+        options = [
+          {
+            badge: "Option 1 • 🌊 Coastal Architectural Navy",
+            title: "Deep Obsidian Geometric",
             font: "DM Sans",
             category: "Geometric Sans",
             color: cleanPrompt.includes("navy") || cleanPrompt.includes("coastal") ? "#071E4A" : (detectedColor || "#071E4A"),
             effect: "luxury-shadow",
             weight: "900",
-            letterSpacing: "0.18em",
+            letterSpacing: "0.22em",
             transform: "uppercase",
-            description: "Deep obsidian navy typography with precision tracking and architectural grounding"
+            description: "Deep obsidian navy typography with generous architectural tracking and solid grounding"
           },
           {
-            badge: "Option 2 • 🏛️ Swiss Minimalist Relief",
-            title: "Clean Modernist Emboss",
+            badge: "Option 2 • 🏛️ Ultra-Bold Modernist Titanium",
+            title: "Montserrat Heavy 900",
             font: "Montserrat",
             category: "Architectural Sans",
             color: detectedColor === "#071E4A" ? "#FFFFFF" : (detectedColor || "#FFFFFF"),
-            effect: "embossed",
-            weight: "900",
-            letterSpacing: "0.25em",
-            transform: "uppercase",
-            description: "High-luxury micro-embossed clean white sans with wide letter tracking"
-          },
-          {
-            badge: "Option 3 • 💎 Pacific Sapphire Precision",
-            title: "Crisp Sapphire Glow",
-            font: "Inter",
-            category: "Precision Sans",
-            color: "#38BDF8",
-            effect: "neon-glow",
-            weight: "800",
-            letterSpacing: "0.12em",
-            transform: "uppercase",
-            description: "Crisp contemporary geometric sans washed in subtle ocean sapphire luminescence"
-          }
-        ];
-      }
-      // 7. Gold / Luxury / Embossed / General Default Synthesizer
-      else {
-        options = [
-          {
-            badge: "Option 1 • 👑 24K Regal Embossed",
-            title: "Royal 24K Gold Emboss",
-            font: "Cinzel",
-            category: "Monumental Roman",
-            color: detectedColor || "#F5C451",
-            effect: extractEffectFromPrompt(cleanPrompt) || "embossed",
+            effect: "chiseled",
             weight: "900",
             letterSpacing: "0.18em",
             transform: "uppercase",
-            description: "Beveled 24K gold with raised physical highlight and crisp luxury drop shadow"
+            description: "Authoritative architectural sans with sharp physical presence and wide letter spacing"
           },
           {
-            badge: "Option 2 • ✨ Champagne Gold Foil",
-            title: "Haute Editorial Gold Foil",
-            font: "Playfair Display",
-            category: "Editorial Serif",
-            color: cleanPrompt.includes("white") ? "#FFFFFF" : (detectedColor === "#F5C451" ? "#F8E5A7" : detectedColor),
+            badge: "Option 3 • 💎 Designer Avant-Garde Sans",
+            title: "Syne Haute Precision",
+            font: "Syne",
+            category: "Designer Display",
+            color: cleanPrompt.includes("gold") ? "#F5C451" : (detectedColor || "#F8FAFC"),
+            effect: "luxury-shadow",
+            weight: "800",
+            letterSpacing: "0.12em",
+            transform: "uppercase",
+            description: "Modernist designer typography with distinctive architectural geometry"
+          }
+        ];
+      }
+      // 4. Executive Calligraphy & Script Signature
+      else if (cleanPrompt.includes("signature") || cleanPrompt.includes("calligraphy") || cleanPrompt.includes("script") || cleanPrompt.includes("handwritten") || cleanPrompt.includes("cursive") || cleanPrompt.includes("flourish")) {
+        options = [
+          {
+            badge: "Option 1 • 🖋️ Aristocratic Gold Script",
+            title: "Pinyon Formal Calligraphy",
+            font: "Pinyon Script",
+            category: "Formal Calligraphy",
+            color: detectedColor || "#F8E5A7",
             effect: "gold-foil",
+            weight: "400",
+            letterSpacing: "0.02em",
+            transform: "none",
+            description: "Exquisite aristocratic calligraphy with flowing flourishes in warm metallic gold"
+          },
+          {
+            badge: "Option 2 • ✍️ Executive Signature Shadow",
+            title: "Alex Brush Formal Swash",
+            font: "Alex Brush",
+            category: "Executive Brush",
+            color: detectedColor === "#F8E5A7" ? "#FFFFFF" : (detectedColor || "#FFFFFF"),
+            effect: "luxury-shadow",
+            weight: "400",
+            letterSpacing: "0.03em",
+            transform: "none",
+            description: "Refined hand-brushed executive signature anchored by subtle optical depth"
+          },
+          {
+            badge: "Option 3 • 🌿 Approachable Editorial Script",
+            title: "Caveat Tactile Script",
+            font: "Caveat",
+            category: "Warm Editorial Script",
+            color: detectedColor || "#8E1820",
+            effect: "embossed",
+            weight: "700",
+            letterSpacing: "0.01em",
+            transform: "none",
+            description: "Authentic, warm editorial margin handwriting with tactile fine-line ink impression"
+          }
+        ];
+      }
+      // 5. Heritage Letterpress / Book Editorial / Literary Deboss
+      else if (cleanPrompt.includes("press") || cleanPrompt.includes("letterpress") || cleanPrompt.includes("book") || cleanPrompt.includes("vintage") || cleanPrompt.includes("heritage") || cleanPrompt.includes("debossed") || cleanPrompt.includes("literary")) {
+        options = [
+          {
+            badge: "Option 1 • 📜 Heritage Literary Press",
+            title: "Baskerville Inked Letterpress",
+            font: "Libre Baskerville",
+            category: "Heritage Book Serif",
+            color: detectedColor || "#E2E8F0",
+            effect: "letterpress",
+            weight: "700",
+            letterSpacing: "0.05em",
+            transform: "capitalize",
+            description: "19th-century literary press styling with recessed paper deboss and crisp typographic ink margins"
+          },
+          {
+            badge: "Option 2 • 🏛️ Classical Roman Inscription",
+            title: "Cinzel Decorative Leaf",
+            font: "Cinzel Decorative",
+            category: "Classical Inscription",
+            color: detectedColor || "#F8E5A7",
+            effect: "chiseled",
+            weight: "700",
+            letterSpacing: "0.14em",
+            transform: "uppercase",
+            description: "Monumental classical titling with decorative finials and subtle chisel depth"
+          },
+          {
+            badge: "Option 3 • ⚜️ Archival Renaissance Serif",
+            title: "EB Garamond Masterwork",
+            font: "EB Garamond",
+            category: "Archival Serif",
+            color: detectedColor || "#FFFFFF",
+            effect: "embossed",
             weight: "800",
             letterSpacing: "0.08em",
             transform: "capitalize",
-            description: "Editorial luxury masthead with metallic reflective specular gold glow"
+            description: "Timeless Renaissance proportions with subtle blind embossed paper texture"
+          }
+        ];
+      }
+      // 6. Bold Impact Display / Power Titling (Robb Report / Bloomberg / Time)
+      else if (cleanPrompt.includes("bold") || cleanPrompt.includes("impact") || cleanPrompt.includes("heavy") || cleanPrompt.includes("title") || cleanPrompt.includes("headline") || cleanPrompt.includes("power")) {
+        options = [
+          {
+            badge: "Option 1 • 📰 High-Impact Condensed Title",
+            title: "Oswald Architectural Display",
+            font: "Oswald",
+            category: "Condensed Display",
+            color: detectedColor || "#FFFFFF",
+            effect: "luxury-shadow",
+            weight: "700",
+            letterSpacing: "0.08em",
+            transform: "uppercase",
+            description: "Powerful condensed architectural titling with solid presence and high-definition legibility"
           },
           {
-            badge: "Option 3 • 🌑 Vogue Haute Shadow 3D",
-            title: "High-Fashion 3D Shadow",
+            badge: "Option 2 • 🏛️ Vogue Ultra-Bold Display",
+            title: "Bodoni Fashion Titan",
             font: "Bodoni Moda",
             category: "High-Contrast Serif",
-            color: cleanPrompt.includes("bronze") ? "#C5A059" : (detectedColor || "#FFFFFF"),
+            color: detectedColor || "#F8E5A7",
+            effect: "chiseled",
+            weight: "900",
+            letterSpacing: "0.04em",
+            transform: "uppercase",
+            description: "Extreme thick-to-thin stroke contrast delivering uncompromising magazine cover prestige"
+          },
+          {
+            badge: "Option 3 • ✨ Modernist Ultra-Tracked Sans",
+            title: "Montserrat Heavy 900",
+            font: "Montserrat",
+            category: "Architectural Sans",
+            color: detectedColor || "#FFFFFF",
             effect: "luxury-shadow",
             weight: "900",
-            letterSpacing: "0.12em",
+            letterSpacing: "0.22em",
+            transform: "uppercase",
+            description: "Heavy solid sans with wide letter tracking and crisp drop shadow"
+          }
+        ];
+      }
+      // 7. Curated Default Luxury Synthesizer
+      else {
+        options = [
+          {
+            badge: "Option 1 • 👑 24K Champagne Gold Foil",
+            title: "Royal Cinzel Gold Leaf",
+            font: "Cinzel",
+            category: "Imperial Roman",
+            color: detectedColor || "#F8E5A7",
+            effect: "gold-foil",
+            weight: "900",
+            letterSpacing: "0.16em",
+            transform: "uppercase",
+            description: "Smooth specular gold foil sheen with authentic metallic luster and crisp edge definition"
+          },
+          {
+            badge: "Option 2 • 🏛️ Vogue High-Contrast Serif",
+            title: "Bodoni Fashion Master",
+            font: "Bodoni Moda",
+            category: "High-Contrast Serif",
+            color: cleanPrompt.includes("white") ? "#FFFFFF" : (detectedColor === "#F8E5A7" ? "#FFFFFF" : detectedColor),
+            effect: "luxury-shadow",
+            weight: "900",
+            letterSpacing: "0.06em",
             transform: "uppercase",
             description: "High-contrast Italian fashion typography with deep atmospheric drop shadow"
+          },
+          {
+            badge: "Option 3 • 🌊 Coastal Architectural Navy",
+            title: "Modernist Precision Sans",
+            font: "DM Sans",
+            category: "Geometric Sans",
+            color: cleanPrompt.includes("navy") ? "#071E4A" : (detectedColor === "#FFFFFF" ? "#071E4A" : "#F8E5A7"),
+            effect: "chiseled",
+            weight: "900",
+            letterSpacing: "0.20em",
+            transform: "uppercase",
+            description: "Deep precision-tracked architectural typography with solid physical presence"
           }
         ];
       }

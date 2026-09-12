@@ -5987,53 +5987,65 @@
   }
 }
 
-/* 3D Physical Text Finish Classes */
+/* ==========================================================================
+   PREMIER EDITORIAL TYPOGRAPHY FINISHES (VOGUE / REAL PRODUCERS / ARCHITECTURAL STANDARD)
+   ========================================================================== */
+
+/* 1. Tactile Fine-Line Emboss (Micro-relieved plate impression) */
 .canvas-effect-embossed {
   text-shadow: 
-    0 -1px 1px rgba(255, 255, 255, 0.85),
-    0 1px 2px rgba(0, 0, 0, 0.95),
-    0 2px 5px rgba(0, 0, 0, 0.75),
-    0 4px 12px rgba(0, 0, 0, 0.6) !important;
+    0 -1px 0px rgba(0, 0, 0, 0.75),
+    0 1px 1px rgba(255, 255, 255, 0.45),
+    0 2px 8px rgba(0, 0, 0, 0.8) !important;
 }
 
+/* 2. Razor-Sharp Chiseled Serif / Architectural Cut */
 .canvas-effect-chiseled {
   text-shadow: 
-    1px 1px 0px rgba(255, 255, 255, 0.45),
-    -1px -1px 0px rgba(0, 0, 0, 0.95),
-    1px 2px 0px #0A0C10,
-    2px 3px 0px #080A0E,
-    3px 4px 0px #050608,
-    4px 5px 8px rgba(0, 0, 0, 0.85) !important;
+    0 1px 0px rgba(255, 255, 255, 0.35),
+    0 -1px 1px rgba(0, 0, 0, 0.9),
+    0 3px 12px rgba(0, 0, 0, 0.85) !important;
 }
 
+/* 3. Multi-Tiered Luxury Editorial Depth Shadow */
 .canvas-effect-luxury-shadow {
   text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.85),
-    0 6px 16px rgba(0, 0, 0, 0.9),
-    0 14px 32px rgba(0, 0, 0, 0.95) !important;
+    0 2px 6px rgba(0, 0, 0, 0.88),
+    0 6px 18px rgba(0, 0, 0, 0.75),
+    0 14px 28px rgba(0, 0, 0, 0.6) !important;
 }
 
+/* 4. 24K Champagne Gold Foil (Smooth Specular Leafing, No Muddy Bands) */
 .canvas-effect-gold-foil {
-  background: linear-gradient(135deg, #FFF6D6 0%, #F5C451 35%, #D4AF37 65%, #AA820A 100%) !important;
+  background: linear-gradient(135deg, #FFF8E7 0%, #F5D77F 25%, #D4AF37 55%, #AA820A 85%, #E6C665 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.7)) drop-shadow(0 4px 16px rgba(0,0,0,0.9)) !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.85)) !important;
 }
 
-.canvas-effect-neon-glow {
+/* 5. Matte Platinum & Silver Leaf Sheen */
+.canvas-effect-platinum-foil {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 30%, #94A3B8 70%, #CBD5E1 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.85)) !important;
+}
+
+/* 6. Ambient Editorial Candlelight Halo (Discrete Warm Luminescence) */
+.canvas-effect-neon-glow,
+.canvas-effect-editorial-glow {
   text-shadow: 
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 22px currentColor,
-    0 0 45px rgba(56, 189, 248, 0.85),
-    0 2px 10px rgba(0, 0, 0, 0.95) !important;
+    0 0 10px rgba(248, 229, 167, 0.35),
+    0 2px 8px rgba(0, 0, 0, 0.95),
+    0 4px 16px rgba(0, 0, 0, 0.85) !important;
 }
 
+/* 7. Classic 19th Century Inked Letterpress Deboss */
 .canvas-effect-letterpress {
   text-shadow: 
-    0 1px 0 rgba(255, 255, 255, 0.55),
+    0 1px 0 rgba(255, 255, 255, 0.4),
     0 -1px 1px rgba(0, 0, 0, 0.85),
-    0 -2px 3px rgba(0, 0, 0, 0.7) !important;
+    0 -2px 4px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* =========================================================================
