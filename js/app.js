@@ -578,7 +578,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "assets/images/magazine/cover_faces_thom_vollenweider.png",
     "assets/images/magazine/cover_faces_dana_grizzel_nc.png",
     "assets/images/magazine/cover_senior_floyd_armstrong.png",
-    "assets/images/magazine/cover_real_estate_monica_nash.png"
+    "assets/images/magazine/cover_real_estate_monica_nash.png",
+    "assets/axios_logo_a_transparent.png"
   ];
 
   function getApprovedPageAssets() {
@@ -4582,7 +4583,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="cover-gradient-overlay"></div>
 
         <!-- Top Header & Masthead -->
-        <div class="cover-header">
+        <div class="cover-header" style="position: relative;">
+          <div class="cover-brand-emblem-wrap" title="Axios Media Group • Primary Master Insignia">
+            <img src="assets/axios_logo_a_transparent.png" class="cover-brand-emblem-a" alt="Axios Logo A" />
+          </div>
           <div class="top-issue-kicker">${p.issueTag} • ${p.issueDate}</div>
           
           ${p.mastheadLogo === 'REAL PRODUCERS' || currentLayoutPreset === 'real-producers' ? `
@@ -4747,7 +4751,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isRight) {
         return `
           <div class="mag-footer-bar"${styleAttr}>
-            <span class="mag-folio-title">${title}</span>
+            <span class="mag-folio-title"><img src="assets/axios_logo_a_transparent.png" class="page-folio-emblem-a" alt="A" />${title}</span>
             <span class="mag-folio-num">${num}</span>
           </div>
         `;
@@ -4755,7 +4759,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
           <div class="mag-footer-bar"${styleAttr}>
             <span class="mag-folio-num">${num}</span>
-            <span class="mag-folio-title">${title}</span>
+            <span class="mag-folio-title"><img src="assets/axios_logo_a_transparent.png" class="page-folio-emblem-a" alt="A" />${title}</span>
           </div>
         `;
       }
@@ -6545,6 +6549,18 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>
 
             <div class="sponsor-showcase-grid">
+              <!-- Showcase Item 0: Axios Media Group Primary Emblem A -->
+              <div class="sponsor-showcase-item" style="border: 1px solid rgba(56, 189, 248, 0.4); background: radial-gradient(circle at top center, rgba(56,189,248,0.1) 0%, rgba(10,14,24,0.95) 100%);">
+                <div class="sponsor-logo-box" style="padding: 10px; display: flex; align-items: center; justify-content: center;">
+                  <img src="assets/axios_logo_a_transparent.png" style="height: 52px; width: auto; filter: drop-shadow(0 0 10px rgba(56,189,248,0.6));" alt="Axios Logo A" />
+                </div>
+                <div style="font-size: 0.72rem; color: #38BDF8; font-weight: 800;">Axios Media Group "A" Master</div>
+                <div style="font-size: 0.65rem; color: #94A3B8; margin-top: 2px;">Platinum Brushed Metal • 300 DPI Pre-Flighted</div>
+                <button type="button" class="btn-studio-action" style="margin-top: 8px; font-size: 0.7rem; padding: 4px 8px;" onclick="alert('Axios Primary Logo A locked to active page.');">
+                  ⚡ Apply A Logo to Page
+                </button>
+              </div>
+
               <!-- Sponsor 1: Real Producers Crest -->
               <div class="sponsor-showcase-item">
                 <div class="sponsor-logo-box" style="color: #D4AF37;">

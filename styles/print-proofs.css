@@ -6666,5 +6666,47 @@
   box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
 }
 
+/* =========================================================================
+   AXIOS MEDIA GROUP // PREMIER EMBLEM "A" BRAND PRIMITIVES
+   ========================================================================= */
 
+.cover-brand-emblem-wrap {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
+.cover-brand-emblem-a {
+  height: 42px;
+  width: auto;
+  max-width: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 12px rgba(56, 189, 248, 0.45));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cover-brand-emblem-a:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 20px rgba(56, 189, 248, 0.85));
+}
+
+.page-folio-emblem-a {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.8));
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.app-header-emblem-a {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
+}
