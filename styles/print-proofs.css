@@ -6710,3 +6710,154 @@
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
 }
+
+/* =========================================================================
+   AXIOS MEDIA // EDITORIAL ADD-ON OBJECT & SPOT ART OVERLAY SYSTEM
+   ========================================================================= */
+
+.axios-magazine-addon-wrapper {
+  position: absolute !important;
+  box-sizing: border-box !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: none !important;
+  transform-origin: center center;
+  transition: box-shadow 0.15s ease;
+  z-index: 120;
+}
+
+.axios-magazine-addon-wrapper img.addon-artwork-img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Hover & Selected Bounding Box */
+.axios-magazine-addon-wrapper:hover {
+  outline: 1px dashed rgba(56, 189, 248, 0.6);
+  cursor: grab;
+}
+
+.axios-magazine-addon-wrapper.is-dragging {
+  cursor: grabbing !important;
+  outline: 1.5px solid #38BDF8 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.axios-magazine-addon-wrapper.is-selected {
+  outline: 2px solid #38BDF8 !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  z-index: 9999 !important;
+}
+
+/* 8 Resize Handles */
+.axios-addon-handle {
+  position: absolute !important;
+  width: 10px !important;
+  height: 10px !important;
+  background: #FFFFFF !important;
+  border: 2px solid #0284C7 !important;
+  border-radius: 2px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
+  z-index: 10001 !important;
+  display: none;
+  box-sizing: border-box !important;
+}
+
+.axios-magazine-addon-wrapper.is-selected .axios-addon-handle {
+  display: block !important;
+}
+
+.axios-addon-handle.handle-nw { top: -6px; left: -6px; cursor: nwse-resize; }
+.axios-addon-handle.handle-ne { top: -6px; right: -6px; cursor: nesw-resize; }
+.axios-addon-handle.handle-sw { bottom: -6px; left: -6px; cursor: nesw-resize; }
+.axios-addon-handle.handle-se { bottom: -6px; right: -6px; cursor: nwse-resize; }
+.axios-addon-handle.handle-n  { top: -6px; left: calc(50% - 5px); cursor: ns-resize; }
+.axios-addon-handle.handle-s  { bottom: -6px; left: calc(50% - 5px); cursor: ns-resize; }
+.axios-addon-handle.handle-w  { top: calc(50% - 5px); left: -6px; cursor: ew-resize; }
+.axios-addon-handle.handle-e  { top: calc(50% - 5px); right: -6px; cursor: ew-resize; }
+
+/* Floating Action Toolbar with Continuous Hit-Bridge */
+.axios-addon-toolbar-wrap {
+  position: absolute !important;
+  top: -46px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  padding-bottom: 10px !important;
+  z-index: 10002 !important;
+  display: none;
+  pointer-events: auto !important;
+}
+
+.axios-magazine-addon-wrapper:hover .axios-addon-toolbar-wrap,
+.axios-magazine-addon-wrapper.is-selected .axios-addon-toolbar-wrap {
+  display: flex !important;
+}
+
+/* When near the top edge of page, flip toolbar below object */
+.axios-magazine-addon-wrapper.toolbar-flip-bottom .axios-addon-toolbar-wrap {
+  top: auto !important;
+  bottom: -46px !important;
+  padding-bottom: 0 !important;
+  padding-top: 10px !important;
+}
+
+.axios-addon-toolbar {
+  background: rgba(15, 23, 42, 0.96) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(56, 189, 248, 0.5) !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  white-space: nowrap !important;
+}
+
+.axios-addon-toolbar-btn {
+  background: #1E293B !important;
+  color: #F8FAFC !important;
+  border: 1px solid #475569 !important;
+  border-radius: 4px !important;
+  padding: 3px 7px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: all 0.12s ease !important;
+}
+
+.axios-addon-toolbar-btn:hover {
+  background: #0284C7 !important;
+  border-color: #38BDF8 !important;
+  color: #FFFFFF !important;
+}
+
+.axios-addon-toolbar-btn.btn-danger {
+  background: rgba(220, 38, 38, 0.25) !important;
+  border-color: #EF4444 !important;
+  color: #FCA5A5 !important;
+}
+
+.axios-addon-toolbar-btn.btn-danger:hover {
+  background: #DC2626 !important;
+  color: #FFFFFF !important;
+}
+
+.axios-addon-size-pill {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #38BDF8 !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
