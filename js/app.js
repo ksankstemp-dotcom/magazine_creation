@@ -4583,10 +4583,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="cover-gradient-overlay"></div>
 
         <!-- Top Header & Masthead -->
-        <div class="cover-header" style="position: relative;">
-          <div class="cover-brand-emblem-wrap" title="Axios Media Group • Primary Master Insignia">
-            <img src="assets/axios_logo_a_transparent.png" class="cover-brand-emblem-a" alt="Axios Logo A" />
-          </div>
+        <div class="cover-header">
           <div class="top-issue-kicker">${p.issueTag} • ${p.issueDate}</div>
           
           ${p.mastheadLogo === 'REAL PRODUCERS' || currentLayoutPreset === 'real-producers' ? `
@@ -4751,7 +4748,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isRight) {
         return `
           <div class="mag-footer-bar"${styleAttr}>
-            <span class="mag-folio-title"><img src="assets/axios_logo_a_transparent.png" class="page-folio-emblem-a" alt="A" />${title}</span>
+            <span class="mag-folio-title">${title}</span>
             <span class="mag-folio-num">${num}</span>
           </div>
         `;
@@ -4759,7 +4756,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
           <div class="mag-footer-bar"${styleAttr}>
             <span class="mag-folio-num">${num}</span>
-            <span class="mag-folio-title"><img src="assets/axios_logo_a_transparent.png" class="page-folio-emblem-a" alt="A" />${title}</span>
+            <span class="mag-folio-title">${title}</span>
           </div>
         `;
       }
