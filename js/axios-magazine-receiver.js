@@ -241,13 +241,14 @@
     if (existingIndex >= 0) {
       placedAddons[pageNum][existingIndex] = Object.assign({}, placedAddons[pageNum][existingIndex], data);
     } else {
+      data.showFlowPrompt = true;
       placedAddons[pageNum].push(data);
     }
 
     savePlacedAddons();
     mountAddonToPageDOM(data, pageNum);
     navigateToPage(pageNum);
-    showMagazineToast(`🎯 Added "${data.objectName || 'Cutout'}" to Page ${pageNum}!`, 'success');
+    showMagazineToast(`🎯 Added "${data.objectName || 'Cutout'}" to Page ${pageNum}! Choose text interaction below.`, 'success');
   }
 
   /**
@@ -335,12 +336,18 @@
     }
 
     const currentShadow = data.shadowEffect || 'editorial_soft';
+    const currentFlowMode = data.textWrapMode || 'wrap'; // 'wrap' | 'behind_text' | 'in_front'
 
     // Percentage width based on standard page width (680px)
     const scalePct = data.scaleFactor || 60;
     const widthPct = Math.round((scalePct / 100) * 55 * 10) / 10; // ~33% width default
     wrapper.style.width = `${widthPct}%`;
-    wrapper.style.zIndex = data.zIndex || '120';
+
+    function getFlowButtonLabel(mode) {
+      if (mode === 'behind_text') return '✍️ Text in Front';
+      if (mode === 'in_front') return '🖼️ Over Text';
+      return '🌊 Form Around';
+    }
 
     // Position Coordinates (Percentage-based so it never drifts on zoom)
     if (data.xPct != null && data.yPct != null) {
@@ -382,7 +389,7 @@
       wrapper.classList.add('toolbar-flip-bottom');
     }
 
-    // Render HTML with 8 Resize Handles + Persistent Toolbar Bridge
+    // Render HTML with 8 Resize Handles + Persistent Toolbar Bridge + Text Flow Widget
     wrapper.innerHTML = `
       <!-- Floating Action Toolbar with Continuous Hit-Bridge -->
       <div class="axios-addon-toolbar-wrap">
@@ -391,12 +398,37 @@
             <span>🎯</span> <span>${data.objectName || 'Spot Art'}</span>
           </span>
           <span class="axios-addon-size-pill">${scalePct}%</span>
+          
+          <!-- Text Flow & Wrap Interaction Mode Button -->
+          <button type="button" class="axios-addon-flow-btn btn-addon-flow-toggle" title="Click to choose how nearby text interacts with this object (Form Around / Text in Front / Over Text)">
+            <span class="flow-btn-label">${getFlowButtonLabel(currentFlowMode)}</span> ▾
+          </button>
+
           <button type="button" class="axios-addon-toolbar-btn btn-addon-scale-down" title="Scale Down (➖)">➖</button>
           <button type="button" class="axios-addon-toolbar-btn btn-addon-scale-up" title="Scale Up (➕)">➕</button>
           <button type="button" class="axios-addon-toolbar-btn btn-addon-shadow" title="Cycle Shadow Finish (🌓)">🌓</button>
           <button type="button" class="axios-addon-toolbar-btn btn-addon-layer-up" title="Bring Forward (▲)">▲</button>
           <button type="button" class="axios-addon-toolbar-btn btn-addon-layer-down" title="Send Backward (▼)">▼</button>
           <button type="button" class="axios-addon-toolbar-btn btn-danger btn-addon-delete" title="Remove Cutout (Delete)">🗑️</button>
+        </div>
+      </div>
+
+      <!-- Text Flow Interactive Choice Widget Bubble -->
+      <div class="axios-addon-flow-prompt-bubble" style="display: ${data.showFlowPrompt ? 'flex' : 'none'};">
+        <div class="axios-flow-prompt-title">
+          <span>🌊</span> <span>Nearby Text Placement:</span>
+        </div>
+        <div class="axios-flow-pills-row">
+          <button type="button" class="axios-flow-mode-pill ${currentFlowMode === 'wrap' ? 'active' : ''}" data-mode="wrap" title="Nearby editorial paragraphs & teasers form around this cutout">
+            🌊 Form Around Object
+          </button>
+          <button type="button" class="axios-flow-mode-pill ${currentFlowMode === 'behind_text' ? 'active' : ''}" data-mode="behind_text" title="Let headlines, titles and pull-quotes pass in front of the subject">
+            ✍️ Move Text in Front
+          </button>
+          <button type="button" class="axios-flow-mode-pill ${currentFlowMode === 'in_front' ? 'active' : ''}" data-mode="in_front" title="Place cutout on top layer over all background copy">
+            🖼️ Image in Front
+          </button>
+          <button type="button" class="axios-flow-mode-pill btn-close-flow-bubble" style="background:#0f172a; border-color:#64748b; padding:4px 6px;" title="Dismiss Prompt">✕</button>
         </div>
       </div>
 
@@ -414,9 +446,85 @@
       <img src="${data.dataUrl}" alt="${data.objectName}" class="addon-artwork-img" style="filter: ${getShadowCss(currentShadow)};">
     `;
 
+    // Apply the initial Text Flow Mode classes and z-index
+    function applyFlowMode(mode) {
+      wrapper.classList.remove('flow-mode-wrap', 'flow-mode-behind-text', 'flow-mode-in-front');
+      data.textWrapMode = mode;
+
+      if (mode === 'behind_text') {
+        wrapper.classList.add('flow-mode-behind-text');
+        wrapper.style.zIndex = '8';
+        data.zIndex = 8;
+      } else if (mode === 'in_front') {
+        wrapper.classList.add('flow-mode-in-front');
+        wrapper.style.zIndex = '160';
+        data.zIndex = 160;
+      } else {
+        wrapper.classList.add('flow-mode-wrap');
+        wrapper.style.zIndex = '120';
+        data.zIndex = 120;
+      }
+
+      // Update toolbar label
+      const labelSpan = wrapper.querySelector('.flow-btn-label');
+      if (labelSpan) labelSpan.textContent = getFlowButtonLabel(mode);
+
+      // Update active pill state
+      wrapper.querySelectorAll('.axios-flow-mode-pill[data-mode]').forEach(p => {
+        if (p.dataset.mode === mode) p.classList.add('active');
+        else p.classList.remove('active');
+      });
+
+      savePlacedAddons();
+    }
+
+    applyFlowMode(currentFlowMode);
+
+    // Flow Toggle Button handler (opens/toggles the flow prompt bubble)
+    const btnFlowToggle = wrapper.querySelector('.btn-addon-flow-toggle');
+    const flowBubble = wrapper.querySelector('.axios-addon-flow-prompt-bubble');
+
+    if (btnFlowToggle && flowBubble) {
+      btnFlowToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        const isOpen = flowBubble.style.display === 'flex';
+        flowBubble.style.display = isOpen ? 'none' : 'flex';
+      });
+    }
+
+    // Flow Mode Pills handlers
+    wrapper.querySelectorAll('.axios-flow-mode-pill[data-mode]').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        const mode = pill.dataset.mode;
+        applyFlowMode(mode);
+
+        if (mode === 'behind_text') {
+          showMagazineToast('✍️ Editorial text & headlines now pass in front of subject!', 'success');
+        } else if (mode === 'in_front') {
+          showMagazineToast('🖼️ Cutout is now in front of background copy!', 'success');
+        } else {
+          showMagazineToast('🌊 Nearby copy now forms around the object contour!', 'success');
+        }
+
+        if (flowBubble) flowBubble.style.display = 'none';
+      });
+    });
+
+    const btnCloseBubble = wrapper.querySelector('.btn-close-flow-bubble');
+    if (btnCloseBubble && flowBubble) {
+      btnCloseBubble.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        flowBubble.style.display = 'none';
+      });
+    }
+
     // 1. Selection Handler
     wrapper.addEventListener('pointerdown', (e) => {
-      if (e.target.closest('.axios-addon-toolbar-btn') || e.target.classList.contains('axios-addon-handle')) return;
+      if (e.target.closest('.axios-addon-toolbar-btn') || e.target.closest('.axios-addon-flow-btn') || e.target.closest('.axios-addon-flow-prompt-bubble') || e.target.classList.contains('axios-addon-handle')) return;
       deselectAllAddons();
       wrapper.classList.add('is-selected');
       selectedAddonId = data.assetId;
@@ -506,7 +614,7 @@
         e.stopPropagation();
         e.preventDefault();
         let curZ = parseInt(wrapper.style.zIndex, 10) || 120;
-        curZ = Math.max(10, curZ - 10);
+        curZ = Math.max(5, curZ - 10);
         wrapper.style.zIndex = curZ;
         data.zIndex = curZ;
         savePlacedAddons();

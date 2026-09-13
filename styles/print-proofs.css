@@ -6861,3 +6861,128 @@
   font-family: 'DM Sans', sans-serif !important;
 }
 
+/* =========================================================================
+   TEXT FLOW & CONTOUR WRAP WIDGET STYLES
+   ========================================================================= */
+
+.axios-addon-flow-btn {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(37, 99, 235, 0.25) 100%) !important;
+  border: 1px solid #38BDF8 !important;
+  color: #F8FAFC !important;
+  border-radius: 4px !important;
+  padding: 3px 8px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  transition: all 0.15s ease !important;
+}
+
+.axios-addon-flow-btn:hover {
+  background: linear-gradient(135deg, #38BDF8 0%, #2563EB 100%) !important;
+  color: #0A0E17 !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5) !important;
+}
+
+/* On-Placement Interactive Helper Widget Bubble */
+.axios-addon-flow-prompt-bubble {
+  position: absolute !important;
+  top: 104% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: rgba(15, 23, 42, 0.98) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid #38BDF8 !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 16px rgba(56, 189, 248, 0.3) !important;
+  z-index: 10010 !important;
+  white-space: nowrap !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  animation: axiosFadeSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes axiosFadeSlideIn {
+  0% { opacity: 0; transform: translate(-50%, -6px); }
+  100% { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.axios-flow-prompt-title {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  color: #38BDF8 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.axios-flow-pills-row {
+  display: flex !important;
+  gap: 5px !important;
+  align-items: center !important;
+}
+
+.axios-flow-mode-pill {
+  background: #1E293B !important;
+  border: 1px solid #475569 !important;
+  color: #CBD5E1 !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: all 0.12s ease !important;
+}
+
+.axios-flow-mode-pill:hover {
+  background: #334155 !important;
+  border-color: #38BDF8 !important;
+  color: #FFFFFF !important;
+}
+
+.axios-flow-mode-pill.active {
+  background: linear-gradient(135deg, #0284C7 0%, #2563EB 100%) !important;
+  border-color: #38BDF8 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.4) !important;
+}
+
+/* Layer & Text Flow Engine Behavior Classes */
+.axios-magazine-addon-wrapper.flow-mode-behind-text {
+  z-index: 8 !important;
+}
+
+/* Elevate adjacent text when behind-text is active */
+.magazine-cover:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) .person-headline-name,
+.magazine-cover:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) .cover-header,
+.magazine-cover:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) .cover-person-spotlight,
+.mag-page:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) h1,
+.mag-page:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) h2,
+.mag-page:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) h3,
+.mag-page:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) h4,
+.mag-page:has(.axios-magazine-addon-wrapper.flow-mode-behind-text) p {
+  position: relative !important;
+  z-index: 25 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 1px rgba(0,0,0,0.8) !important;
+}
+
+.axios-magazine-addon-wrapper.flow-mode-in-front {
+  z-index: 160 !important;
+}
+
+.axios-magazine-addon-wrapper.flow-mode-wrap {
+  z-index: 120 !important;
+}
+
+
